@@ -49,10 +49,11 @@
         <div class="cta">
           <a class="btn primary" href="#proyectos">Ver proyectos</a>
           <a class="btn ghost" href="#contacto">Hablemos</a>
-          <!-- Descarga directa del PDF (asegúrate de subir el archivo a assets/) -->
           <a class="btn ghost" href="assets/curriculumJanGarcia.pdf" download>Descargar CV</a>
+          <a class="btn ghost" href="https://github.com/jangarcia93/jangarcia93.github.io" target="_blank" rel="noreferrer noopener">Ver mi GitHub</a>
         </div>
       </div>
+
       <div class="pfp glass" data-reveal>
         <img src="assets/profile.png" alt="Foto de perfil de Jan García" />
       </div>
@@ -61,9 +62,7 @@
     <section id="sobre-mi">
       <h2 class="section-title">Sobre mí</h2>
       <p class="lead">
-        Técnico en Administración de Sistemas Informáticos en Red y estudiante de Ciberseguridad. Experiencia en entorno de hosting web brindando soporte técnico:
-        gestión de DNS (A, MX, CNAME, SPF, DKIM), reglas de <code>iptables</code>, análisis de logs y mantenimiento de servidores Linux.
-        Interés en hacking ético y administración de sistemas seguros. Responsable, adaptable y con dominio del inglés (Cambridge C1).
+        Técnico en ASIR y estudiante de Ciberseguridad con experiencia previa como soporte técnico en entornos de hosting web, gestionando DNS, logs y servidores entre otros ámbitos. Perfil técnico con visión global de sistemas, redes y seguridad. Destaco por mi responsabilidad, adaptabilidad, dominio del inglés y capacidad de trabajo en equipo. Busco seguir desarrollándome en el ámbito del hacking ético y la administración de sistemas seguros.
       </p>
     </section>
 
@@ -77,10 +76,6 @@
             <h3>Laboratorio de iptables</h3>
             <p>Políticas por defecto, reglas por cadena, hardening básico y pruebas de conectividad.</p>
             <div class="meta"><span class="tag">Linux</span><span class="tag">iptables</span><span class="tag">Redes</span></div>
-            <p style="margin-top:10px">
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ver demo</a>
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Código</a>
-            </p>
           </div>
         </article>
 
@@ -90,10 +85,6 @@
             <h3>DNS Troubleshooting</h3>
             <p>Resolución de incidencias reales: propagación, registros SPF/DKIM/DMARC y cachés.</p>
             <div class="meta"><span class="tag">DNS</span><span class="tag">Correo</span><span class="tag">CLI</span></div>
-            <p style="margin-top:10px">
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Guía</a>
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Repositorio</a>
-            </p>
           </div>
         </article>
 
@@ -103,10 +94,6 @@
             <h3>Scripts de automatización</h3>
             <p>Backups, parsing de logs y checks de salud de servicios con alertas básicas.</p>
             <div class="meta"><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Logs</span></div>
-            <p style="margin-top:10px">
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ejemplos</a>
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Código</a>
-            </p>
           </div>
         </article>
       </div>
@@ -151,7 +138,6 @@
         <aside class="glass" style="padding:18px">
           <h3 style="margin: 4px 0 10px">Descargar CV</h3>
           <p class="lead">Versión PDF actualizada y lista para compartir.</p>
-          <!-- Botón de descarga (asegúrate de que el PDF exista en assets/) -->
           <a class="btn primary" href="assets/curriculumJanGarcia.pdf" download>Descargar PDF</a>
         </aside>
       </div>
@@ -166,7 +152,7 @@
         <textarea name="mensaje" placeholder="Cuéntame..." required></textarea>
         <div style="display:flex; gap:10px; flex-wrap:wrap">
           <button class="btn primary" type="submit">Enviar</button>
-          <a class="btn ghost" href="https://github.com/TU_USUARIO" target="_blank" rel="noreferrer noopener">GitHub</a>
+          <a class="btn ghost" href="https://github.com/jangarcia93/jangarcia93.github.io" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noreferrer noopener">LinkedIn</a>
           <a class="btn ghost" href="mailto:jangarciamae@gmail.com">Email</a>
         </div>
@@ -180,10 +166,7 @@
   </footer>
 
   <script>
-    // Año en el footer
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Tema claro/oscuro con persistencia
     const btn = document.getElementById('themeToggle');
     const applyTheme = (t) => {
       document.body.classList.toggle('is-light', t === 'light');
@@ -197,8 +180,6 @@
       const stored = localStorage.getItem('theme');
       if (stored) applyTheme(stored);
     })();
-
-    // Scroll reveal
     const io = new IntersectionObserver((entries)=>{
       for (const e of entries){ if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }
     }, { threshold: .1 });
@@ -206,3 +187,4 @@
   </script>
 </body>
 </html>
+
