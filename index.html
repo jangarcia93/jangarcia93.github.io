@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Portafolio — Liquid Glass</title>
-  <meta name="description" content="Portafolio personal: foto, CV, proyectos, contacto y redes." />
+  <title>Portfolio — Jan García</title>
+  <meta name="description" content="Portfolio personal de Jan García: ciberseguridad, sysadmin, proyectos y contacto." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b0f14;
-      --bg-2: #0e131a;
-      --text: #e6ecf2;
-      --muted: #9fb2c7;
-      --accent: #78c0ff;
-      --glass: 20, 30, 40;
+      --bg: #0a0a0b;
+      --bg-2: #0f0f11;
+      --text: #f3f4f6;
+      --muted: #9b9da3;
+      --accent: #ff4040;      /* rojo principal */
+      --accent-2: #ff6b6b;    /* rojo secundario */
+      --glass: 18, 18, 20;
       --radius: 22px;
       --maxw: 1200px;
     }
@@ -23,33 +24,33 @@
     html, body { height: 100%; }
     body {
       margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 800px at 20% -10%, #142035 0%, transparent 60%),
-                  radial-gradient(1000px 700px at 120% 0%, #1c263a 0%, transparent 55%),
-                  linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      background:
+        radial-gradient(1200px 800px at 20% -10%, #1a0f12 0%, transparent 60%),
+        radial-gradient(1000px 700px at 120% 0%, #1a1212 0%, transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
       color: var(--text); overflow-x: hidden; scroll-behavior: smooth;
     }
-    /* Floating blobs for subtle motion */
+    /* Floating blobs (rojos) */
     .blob {
-      position: fixed; inset: auto; z-index: -2; filter: blur(50px); opacity: .4; pointer-events: none;
+      position: fixed; inset: auto; z-index: -2; filter: blur(60px); opacity: .35; pointer-events: none;
       animation: float 16s ease-in-out infinite;
-      background: radial-gradient(circle at 30% 30%, #7bd2ff, transparent 60%),
-                  radial-gradient(circle at 70% 60%, #a58cff, transparent 60%);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,64,64,.9), transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(255,107,107,.8), transparent 60%);
     }
-    .blob.one { width: 480px; height: 480px; left: -120px; top: -80px; }
-    .blob.two { width: 520px; height: 520px; right: -160px; bottom: -120px; animation-delay: -5s; }
+    .blob.one { width: 520px; height: 520px; left: -140px; top: -100px; }
+    .blob.two { width: 560px; height: 560px; right: -180px; bottom: -140px; animation-delay: -5s; }
     @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-20px) } }
 
     header {
       position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(150%) blur(16px);
-      background: rgba(var(--glass), .35); border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(var(--glass), .45); border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .nav {
-      max-width: var(--maxw); margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 16px;
-    }
+    .nav { max-width: var(--maxw); margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 16px; }
     .brand { font-weight: 800; letter-spacing: .4px; font-size: 18px; }
     .spacer { flex: 1 }
-    .nav a { color: var(--text); text-decoration: none; opacity: .8; padding: 10px 14px; border-radius: 12px; }
-    .nav a:hover { opacity: 1; background: rgba(255,255,255,.05) }
+    .nav a { color: var(--text); text-decoration: none; opacity: .85; padding: 10px 14px; border-radius: 12px; }
+    .nav a:hover { opacity: 1; background: rgba(255,64,64,.10) }
     .btn-theme { border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); border-radius: 12px; padding: 8px 12px; color: var(--text); }
 
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 20px; }
@@ -59,26 +60,33 @@
     @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
 
     .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
-      border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius);
-      box-shadow: 0 10px 30px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.2);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.2);
       backdrop-filter: blur(18px) saturate(160%);
     }
     .hero-card { padding: 28px; position: relative; overflow: hidden; }
     .hero-title { font-size: clamp(28px, 4vw, 52px); line-height: 1.05; margin: 0 0 8px; }
+    .hero-title .grad {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
     .hero-sub { color: var(--muted); font-weight: 500; margin: 0 0 20px; }
     .tagrow { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 24px; }
-    .tag { padding: 8px 12px; border-radius: 999px; font-size: 13px; color: #d9ecff; background: rgba(120,192,255,.15); border: 1px solid rgba(120,192,255,.35); }
+    .tag {
+      padding: 8px 12px; border-radius: 999px; font-size: 13px; color: #ffecec;
+      background: rgba(255,64,64,.12); border: 1px solid rgba(255,64,64,.35);
+    }
     .cta { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { appearance: none; border: none; cursor: pointer; font-weight: 600; border-radius: 14px; padding: 12px 16px; }
-    .btn.primary { background: linear-gradient(135deg, #71c8ff, #a28bff); color: #0a0f15; }
+    .btn { appearance: none; border: none; cursor: pointer; font-weight: 700; border-radius: 14px; padding: 12px 16px; }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #1b1b1d; }
     .btn.ghost { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); color: var(--text); }
 
     .pfp {
       width: 200px; aspect-ratio: 1/1; border-radius: 30px; overflow: hidden; border: 1px solid rgba(255,255,255,.18);
-      background: radial-gradient(110% 140% at 90% 10%, rgba(255,255,255,.18), rgba(255,255,255,.05));
+      background: radial-gradient(110% 140% at 90% 10%, rgba(255,255,255,.10), rgba(255,255,255,.04));
       backdrop-filter: blur(12px) saturate(160%);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 10px 40px rgba(0,0,0,.45);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 10px 40px rgba(0,0,0,.55);
     }
     .pfp img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(105%); }
 
@@ -92,9 +100,9 @@
     @media (max-width: 1100px){ .grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 700px){ .grid { grid-template-columns: 1fr; } }
     .card { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06);
-            box-shadow: 0 8px 24px rgba(0,0,0,.4); transition: transform .35s ease, box-shadow .35s ease; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(0,0,0,.55) }
-    .thumb { aspect-ratio: 16/9; background: #0f1622; display: grid; place-items: center; border-bottom: 1px solid rgba(255,255,255,.08); }
+            box-shadow: 0 8px 24px rgba(0,0,0,.5); transition: transform .35s ease, box-shadow .35s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(0,0,0,.65) }
+    .thumb { aspect-ratio: 16/9; background: #121214; display: grid; place-items: center; border-bottom: 1px solid rgba(255,255,255,.08); }
     .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .card-body { padding: 16px 16px 18px; }
     .card h3 { margin: 0 0 6px; font-size: 18px; }
@@ -107,7 +115,7 @@
     @media (max-width: 900px){ .resume { grid-template-columns: 1fr; } }
     .timeline { display: grid; gap: 14px; }
     .item { padding: 16px; border-radius: 16px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); }
-    .item .where { opacity: .8; font-weight: 600 }
+    .item .where { opacity: .9; font-weight: 700 }
     .item .when { color: var(--muted); font-size: 13px; }
 
     /* Contact */
@@ -115,7 +123,6 @@
     input, textarea { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.14);
                       background: rgba(255,255,255,.06); color: var(--text); }
     textarea { min-height: 120px; resize: vertical; }
-
     footer { opacity: .75; padding: 50px 20px; text-align: center; }
 
     /* Scroll reveal */
@@ -124,10 +131,11 @@
 
     /* Light scheme */
     @media (prefers-color-scheme: light) {
-      :root { --bg: #f4f7fb; --bg-2: #e9f0f9; --text: #0b1320; --muted: #50627a; }
+      :root { --bg: #f7f7f8; --bg-2: #efeff1; --text: #111114; --muted: #4b4d53; }
       body { color: var(--text); }
+      .tag { color: #5b1111; background: rgba(255,64,64,.18); border-color: rgba(255,64,64,.4); }
     }
-    .is-light { --bg: #f4f7fb; --bg-2: #e9f0f9; --text: #0b1320; --muted: #50627a; }
+    .is-light { --bg: #f7f7f8; --bg-2: #efeff1; --text: #111114; --muted: #4b4d53; }
   </style>
 </head>
 <body>
@@ -136,7 +144,7 @@
 
   <header class="glass">
     <nav class="nav">
-      <div class="brand">Mi Portafolio</div>
+      <div class="brand">Jan García</div>
       <div class="spacer"></div>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#proyectos">Proyectos</a>
@@ -149,14 +157,17 @@
   <main class="wrap">
     <section class="hero">
       <div class="hero-card glass" data-reveal>
-        <h1 class="hero-title">Hola, soy <span style="background: linear-gradient(135deg,#71c8ff,#a28bff); -webkit-background-clip: text; background-clip: text; color: transparent;">Tu Nombre</span></h1>
-        <p class="hero-sub">Desarrollador/a web • Frontend • Backend • UI/UX</p>
+        <h1 class="hero-title">Hola, soy <span class="grad">Jan García</span></h1>
+        <p class="hero-sub">Técnico en ASIR · Estudiante de Ciberseguridad · Soporte técnico en hosting (DNS, iptables, logs, Linux)</p>
         <div class="tagrow">
-          <span class="tag">JavaScript</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">GitHub</span>
+          <span class="tag">Linux</span>
+          <span class="tag">DNS</span>
+          <span class="tag">iptables</span>
+          <span class="tag">Bash</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+          <span class="tag">Hacking ético (junior)</span>
         </div>
         <div class="cta">
           <a class="btn primary" href="#proyectos">Ver proyectos</a>
@@ -166,31 +177,33 @@
       </div>
       <div class="pfp glass" data-reveal>
         <!-- Reemplaza la ruta por tu foto real -->
-        <img src="assets/profile.jpg" alt="Foto de perfil" />
+        <img src="assets/profile.jpg" alt="Foto de perfil de Jan García" />
       </div>
     </section>
 
     <section id="sobre-mi">
       <h2 class="section-title">Sobre mí</h2>
-      <p class="lead">Breve descripción sobre quién eres, tus intereses y tu propuesta de valor. Menciona tu experiencia, tecnologías preferidas y el tipo de proyectos que te apasionan.</p>
+      <p class="lead">
+        Técnico en Administración de Sistemas Informáticos en Red y estudiante de Ciberseguridad. Experiencia en entorno de hosting web brindando soporte técnico:
+        gestión de DNS (A, MX, CNAME, SPF, DKIM), reglas de <code>iptables</code>, análisis de logs y mantenimiento de servidores Linux.
+        Me interesan el hacking ético y la administración de sistemas seguros. Responsable, adaptable y con dominio del inglés.
+      </p>
     </section>
 
     <section id="proyectos">
       <h2 class="section-title">Proyectos destacados</h2>
-      <p class="lead">Una selección de trabajos con enfoque en impacto, diseño y código limpio.</p>
+      <p class="lead">Algunos labs y prácticas orientadas a seguridad y sistemas.</p>
       <div class="grid">
         <!-- Proyecto 1 -->
         <article class="card" data-reveal>
           <div class="thumb">
-            <img src="assets/proyecto1.jpg" alt="Captura del proyecto 1" />
+            <img src="assets/proyecto1.jpg" alt="Laboratorio de iptables" />
           </div>
           <div class="card-body">
-            <h3>Proyecto Uno</h3>
-            <p>Breve resumen del proyecto, el problema que resuelve y tu contribución.</p>
+            <h3>Laboratorio de iptables</h3>
+            <p>Políticas por defecto, reglas por cadena, hardening básico y pruebas de conectividad.</p>
             <div class="meta">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">Linux</span><span class="tag">iptables</span><span class="tag">Redes</span>
             </div>
             <p style="margin-top:10px">
               <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ver demo</a>
@@ -201,37 +214,33 @@
         <!-- Proyecto 2 -->
         <article class="card" data-reveal>
           <div class="thumb">
-            <img src="assets/proyecto2.jpg" alt="Captura del proyecto 2" />
+            <img src="assets/proyecto2.jpg" alt="Troubleshooting DNS" />
           </div>
           <div class="card-body">
-            <h3>Proyecto Dos</h3>
-            <p>Describe la funcionalidad, las tecnologías empleadas y resultados.</p>
+            <h3>DNS Troubleshooting</h3>
+            <p>Resolución de incidencias reales: propagación, registros SPF/DKIM/DMARC y cachés.</p>
             <div class="meta">
-              <span class="tag">Node</span>
-              <span class="tag">API</span>
-              <span class="tag">MongoDB</span>
+              <span class="tag">DNS</span><span class="tag">Correo</span><span class="tag">CLI</span>
             </div>
             <p style="margin-top:10px">
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ver demo</a>
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Código</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Guía</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Repositorio</a>
             </p>
           </div>
         </article>
         <!-- Proyecto 3 -->
         <article class="card" data-reveal>
           <div class="thumb">
-            <img src="assets/proyecto3.jpg" alt="Captura del proyecto 3" />
+            <img src="assets/proyecto3.jpg" alt="Automatización con Bash/Python" />
           </div>
           <div class="card-body">
-            <h3>Proyecto Tres</h3>
-            <p>Cuenta qué aprendiste, retos técnicos y por qué es interesante.</p>
+            <h3>Scripts de automatización</h3>
+            <p>Backups, parsing de logs y checks de salud de servicios con alertas básicas.</p>
             <div class="meta">
-              <span class="tag">React</span>
-              <span class="tag">Vite</span>
-              <span class="tag">UI</span>
+              <span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Logs</span>
             </div>
             <p style="margin-top:10px">
-              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ver demo</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ejemplos</a>
               <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Código</a>
             </p>
           </div>
@@ -244,24 +253,24 @@
       <div class="resume">
         <div>
           <div class="item">
-            <div class="where">Puesto / Empresa</div>
-            <div class="when">2023 — Actualidad</div>
-            <p>Describe responsabilidades, logros medibles y tecnologías.</p>
+            <div class="where">Soporte técnico (Customer Care) · Hosting web</div>
+            <div class="when">2024 — Actualidad</div>
+            <p>Gestión de incidencias, DNS (A/MX/CNAME/SPF/DKIM), iptables, análisis de logs y mantenimiento de servidores Linux.</p>
           </div>
           <div class="item">
-            <div class="where">Puesto / Empresa</div>
-            <div class="when">2021 — 2023</div>
-            <p>Impacto, mejoras, resultados y herramientas.</p>
+            <div class="where">ASIR · Administración de Sistemas Informáticos en Red</div>
+            <div class="when">2023 — 2025</div>
+            <p>Redes, sistemas, virtualización, seguridad básica, scripting (Bash/Python) y bases de datos (SQL).</p>
           </div>
           <div class="item">
-            <div class="where">Formación</div>
-            <div class="when">Año — Año</div>
-            <p>Título, centro, principales asignaturas o proyectos.</p>
+            <div class="where">Grado en Ciberseguridad (en curso)</div>
+            <div class="when">2025 — Actualidad</div>
+            <p>Interés en hacking ético, hardening y operaciones de sistemas seguros.</p>
           </div>
         </div>
         <aside class="glass" style="padding:18px">
           <h3 style="margin: 4px 0 10px">Descargar CV</h3>
-          <p class="lead">Mantén aquí tu CV en PDF actualizado para descarga directa.</p>
+          <p class="lead">Mantengo mi CV en PDF actualizado para descarga directa.</p>
           <a class="btn primary" href="assets/CV.pdf" download>Descargar PDF</a>
         </aside>
       </div>
@@ -279,7 +288,6 @@
           <button class="btn primary" type="submit">Enviar</button>
           <a class="btn ghost" href="https://github.com/TU_USUARIO" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noreferrer noopener">LinkedIn</a>
-          <a class="btn ghost" href="https://twitter.com/TU_USUARIO" target="_blank" rel="noreferrer noopener">X/Twitter</a>
           <a class="btn ghost" href="mailto:tuemail@ejemplo.com">Email</a>
         </div>
       </form>
@@ -287,7 +295,7 @@
   </main>
 
   <footer>
-    © <span id="y"></span> Tu Nombre · Hecho con ♥ y GitHub Pages
+    © <span id="y"></span> Jan García · Hecho con ♥ y GitHub Pages
   </footer>
 
   <script>
@@ -296,7 +304,6 @@
 
     // Tema claro/oscuro con persistencia
     const btn = document.getElementById('themeToggle');
-    const root = document.documentElement;
     const applyTheme = (t) => {
       document.body.classList.toggle('is-light', t === 'light');
       localStorage.setItem('theme', t);
@@ -318,3 +325,4 @@
   </script>
 </body>
 </html>
+
