@@ -78,12 +78,13 @@ header {
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 20px; }
 
-/* Hero */
+/* ===== HERO ===== */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* izquierda más ancha; derecha (foto) más estrecha */
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
   gap: 28px;
-  align-items: stretch;
+  align-items: stretch; /* fuerza igual altura en ambas columnas */
   padding: 40px 0 20px;
 }
 @media (max-width: 900px) {
@@ -104,7 +105,7 @@ header {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* centra verticalmente el contenido */
 }
 
 .hero-title {
@@ -147,11 +148,13 @@ header {
   color: var(--text);
 }
 
-/* Foto del hero - grande */
+/* Foto del hero:
+   - Misma altura que el bloque izquierdo (height:100%)
+   - Menor anchura por la plantilla de columnas
+*/
 .pfp {
+  height: 100%;       /* iguala la altura a la de la fila del grid */
   width: 100%;
-  height: 100%;
-  min-height: 460px;
   border-radius: 30px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.18);
@@ -162,21 +165,23 @@ header {
 .pfp img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;      /* rellena todo el recuadro */
   object-position: center;
   display: block;
   filter: saturate(105%);
 }
+
+/* En móviles: apilar y dar una altura cómoda a la foto */
 @media (max-width: 900px) {
-  .pfp { min-height: 340px; margin: 0 auto; max-width: 520px; }
+  .pfp { height: 340px; max-width: 520px; margin: 0 auto; }
 }
 
-/* Sections */
+/* ===== SECCIONES ===== */
 section { padding: 60px 0; }
 h2.section-title { font-size: clamp(22px, 2.6vw, 34px); margin: 0 0 18px; }
 p.lead { color: var(--muted); margin: 0 0 26px; }
 
-/* Projects */
+/* ===== PROYECTOS ===== */
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 @media (max-width: 1100px){ .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 700px){ .grid { grid-template-columns: 1fr; } }
@@ -204,7 +209,7 @@ p.lead { color: var(--muted); margin: 0 0 26px; }
 .meta { display: flex; gap: 10px; flex-wrap: wrap; }
 .meta .tag { font-size: 12px; padding: 6px 10px; }
 
-/* Resume */
+/* ===== CV ===== */
 .resume { display: grid; grid-template-columns: 1fr .9fr; gap: 20px; }
 @media (max-width: 900px){ .resume { grid-template-columns: 1fr; } }
 .item {
@@ -216,7 +221,7 @@ p.lead { color: var(--muted); margin: 0 0 26px; }
 .item .where { opacity: .9; font-weight: 700; }
 .item .when { color: var(--muted); font-size: 13px; }
 
-/* Contact */
+/* ===== CONTACTO ===== */
 form { display: grid; gap: 12px; }
 input, textarea {
   width: 100%;
