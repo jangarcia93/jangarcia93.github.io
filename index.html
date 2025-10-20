@@ -1,35 +1,320 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jan García - Ciberseguridad & Sysadmin</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Portafolio — Liquid Glass</title>
+  <meta name="description" content="Portafolio personal: foto, CV, proyectos, contacto y redes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 50px; background-color: #0d1117; color: #c9d1d9; }
-    h1 { color: #58a6ff; }
-    a { color: #58a6ff; text-decoration: none; }
-    section { margin-top: 25px; }
+    :root {
+      --bg: #0b0f14;
+      --bg-2: #0e131a;
+      --text: #e6ecf2;
+      --muted: #9fb2c7;
+      --accent: #78c0ff;
+      --glass: 20, 30, 40;
+      --radius: 22px;
+      --maxw: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 20% -10%, #142035 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 120% 0%, #1c263a 0%, transparent 55%),
+                  linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text); overflow-x: hidden; scroll-behavior: smooth;
+    }
+    /* Floating blobs for subtle motion */
+    .blob {
+      position: fixed; inset: auto; z-index: -2; filter: blur(50px); opacity: .4; pointer-events: none;
+      animation: float 16s ease-in-out infinite;
+      background: radial-gradient(circle at 30% 30%, #7bd2ff, transparent 60%),
+                  radial-gradient(circle at 70% 60%, #a58cff, transparent 60%);
+    }
+    .blob.one { width: 480px; height: 480px; left: -120px; top: -80px; }
+    .blob.two { width: 520px; height: 520px; right: -160px; bottom: -120px; animation-delay: -5s; }
+    @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-20px) } }
+
+    header {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(150%) blur(16px);
+      background: rgba(var(--glass), .35); border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav {
+      max-width: var(--maxw); margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 16px;
+    }
+    .brand { font-weight: 800; letter-spacing: .4px; font-size: 18px; }
+    .spacer { flex: 1 }
+    .nav a { color: var(--text); text-decoration: none; opacity: .8; padding: 10px 14px; border-radius: 12px; }
+    .nav a:hover { opacity: 1; background: rgba(255,255,255,.05) }
+    .btn-theme { border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); border-radius: 12px; padding: 8px 12px; color: var(--text); }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 20px; }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; padding: 40px 0 20px; }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
+      border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.2);
+      backdrop-filter: blur(18px) saturate(160%);
+    }
+    .hero-card { padding: 28px; position: relative; overflow: hidden; }
+    .hero-title { font-size: clamp(28px, 4vw, 52px); line-height: 1.05; margin: 0 0 8px; }
+    .hero-sub { color: var(--muted); font-weight: 500; margin: 0 0 20px; }
+    .tagrow { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 24px; }
+    .tag { padding: 8px 12px; border-radius: 999px; font-size: 13px; color: #d9ecff; background: rgba(120,192,255,.15); border: 1px solid rgba(120,192,255,.35); }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { appearance: none; border: none; cursor: pointer; font-weight: 600; border-radius: 14px; padding: 12px 16px; }
+    .btn.primary { background: linear-gradient(135deg, #71c8ff, #a28bff); color: #0a0f15; }
+    .btn.ghost { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); color: var(--text); }
+
+    .pfp {
+      width: 200px; aspect-ratio: 1/1; border-radius: 30px; overflow: hidden; border: 1px solid rgba(255,255,255,.18);
+      background: radial-gradient(110% 140% at 90% 10%, rgba(255,255,255,.18), rgba(255,255,255,.05));
+      backdrop-filter: blur(12px) saturate(160%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 10px 40px rgba(0,0,0,.45);
+    }
+    .pfp img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(105%); }
+
+    /* Sections */
+    section { padding: 60px 0; }
+    h2.section-title { font-size: clamp(22px, 2.6vw, 34px); margin: 0 0 18px; }
+    p.lead { color: var(--muted); margin: 0 0 26px; }
+
+    /* Projects */
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 1100px){ .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 700px){ .grid { grid-template-columns: 1fr; } }
+    .card { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06);
+            box-shadow: 0 8px 24px rgba(0,0,0,.4); transition: transform .35s ease, box-shadow .35s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(0,0,0,.55) }
+    .thumb { aspect-ratio: 16/9; background: #0f1622; display: grid; place-items: center; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card-body { padding: 16px 16px 18px; }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+    .meta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .meta .tag { font-size: 12px; padding: 6px 10px; }
+
+    /* Resume */
+    .resume { display: grid; grid-template-columns: 1fr .9fr; gap: 20px; }
+    @media (max-width: 900px){ .resume { grid-template-columns: 1fr; } }
+    .timeline { display: grid; gap: 14px; }
+    .item { padding: 16px; border-radius: 16px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); }
+    .item .where { opacity: .8; font-weight: 600 }
+    .item .when { color: var(--muted); font-size: 13px; }
+
+    /* Contact */
+    form { display: grid; gap: 12px; }
+    input, textarea { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.14);
+                      background: rgba(255,255,255,.06); color: var(--text); }
+    textarea { min-height: 120px; resize: vertical; }
+
+    footer { opacity: .75; padding: 50px 20px; text-align: center; }
+
+    /* Scroll reveal */
+    [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    [data-reveal].visible { opacity: 1; transform: translateY(0); }
+
+    /* Light scheme */
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #f4f7fb; --bg-2: #e9f0f9; --text: #0b1320; --muted: #50627a; }
+      body { color: var(--text); }
+    }
+    .is-light { --bg: #f4f7fb; --bg-2: #e9f0f9; --text: #0b1320; --muted: #50627a; }
   </style>
 </head>
 <body>
-  <h1>Hola, soy Jan García 👋</h1>
-  <p>Técnico en ASIR y estudiante de Ciberseguridad. Me interesa el hacking ético, la administración de sistemas y la seguridad en redes.</p>
-  
-  <section>
-    <h2>🔧 Tecnologías</h2>
-    <p>Linux · Windows Server · DNS · iptables · Python · SQL · Git</p>
-  </section>
-  
-  <section>
-    <h2>📂 Proyectos</h2>
-    <ul>
-      <li><a href="https://github.com/tuusuario/nombre-proyecto">Proyecto 1</a></li>
-    </ul>
-  </section>
+  <div class="blob one"></div>
+  <div class="blob two"></div>
 
-  <section>
-    <h2>📫 Contacto</h2>
-    <p><a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></p>
-  </section>
+  <header class="glass">
+    <nav class="nav">
+      <div class="brand">Mi Portafolio</div>
+      <div class="spacer"></div>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#cv">CV</a>
+      <a href="#contacto">Contacto</a>
+      <button class="btn-theme" id="themeToggle" aria-label="Cambiar tema">🌓</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-card glass" data-reveal>
+        <h1 class="hero-title">Hola, soy <span style="background: linear-gradient(135deg,#71c8ff,#a28bff); -webkit-background-clip: text; background-clip: text; color: transparent;">Tu Nombre</span></h1>
+        <p class="hero-sub">Desarrollador/a web • Frontend • Backend • UI/UX</p>
+        <div class="tagrow">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">GitHub</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn ghost" href="#contacto">Hablemos</a>
+          <a class="btn ghost" href="assets/CV.pdf" download>Descargar CV</a>
+        </div>
+      </div>
+      <div class="pfp glass" data-reveal>
+        <!-- Reemplaza la ruta por tu foto real -->
+        <img src="assets/profile.jpg" alt="Foto de perfil" />
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="lead">Breve descripción sobre quién eres, tus intereses y tu propuesta de valor. Menciona tu experiencia, tecnologías preferidas y el tipo de proyectos que te apasionan.</p>
+    </section>
+
+    <section id="proyectos">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="lead">Una selección de trabajos con enfoque en impacto, diseño y código limpio.</p>
+      <div class="grid">
+        <!-- Proyecto 1 -->
+        <article class="card" data-reveal>
+          <div class="thumb">
+            <img src="assets/proyecto1.jpg" alt="Captura del proyecto 1" />
+          </div>
+          <div class="card-body">
+            <h3>Proyecto Uno</h3>
+            <p>Breve resumen del proyecto, el problema que resuelve y tu contribución.</p>
+            <div class="meta">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <p style="margin-top:10px">
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ver demo</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Código</a>
+            </p>
+          </div>
+        </article>
+        <!-- Proyecto 2 -->
+        <article class="card" data-reveal>
+          <div class="thumb">
+            <img src="assets/proyecto2.jpg" alt="Captura del proyecto 2" />
+          </div>
+          <div class="card-body">
+            <h3>Proyecto Dos</h3>
+            <p>Describe la funcionalidad, las tecnologías empleadas y resultados.</p>
+            <div class="meta">
+              <span class="tag">Node</span>
+              <span class="tag">API</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <p style="margin-top:10px">
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ver demo</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Código</a>
+            </p>
+          </div>
+        </article>
+        <!-- Proyecto 3 -->
+        <article class="card" data-reveal>
+          <div class="thumb">
+            <img src="assets/proyecto3.jpg" alt="Captura del proyecto 3" />
+          </div>
+          <div class="card-body">
+            <h3>Proyecto Tres</h3>
+            <p>Cuenta qué aprendiste, retos técnicos y por qué es interesante.</p>
+            <div class="meta">
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">UI</span>
+            </div>
+            <p style="margin-top:10px">
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Ver demo</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer noopener">Código</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2 class="section-title">Currículum</h2>
+      <div class="resume">
+        <div>
+          <div class="item">
+            <div class="where">Puesto / Empresa</div>
+            <div class="when">2023 — Actualidad</div>
+            <p>Describe responsabilidades, logros medibles y tecnologías.</p>
+          </div>
+          <div class="item">
+            <div class="where">Puesto / Empresa</div>
+            <div class="when">2021 — 2023</div>
+            <p>Impacto, mejoras, resultados y herramientas.</p>
+          </div>
+          <div class="item">
+            <div class="where">Formación</div>
+            <div class="when">Año — Año</div>
+            <p>Título, centro, principales asignaturas o proyectos.</p>
+          </div>
+        </div>
+        <aside class="glass" style="padding:18px">
+          <h3 style="margin: 4px 0 10px">Descargar CV</h3>
+          <p class="lead">Mantén aquí tu CV en PDF actualizado para descarga directa.</p>
+          <a class="btn primary" href="assets/CV.pdf" download>Descargar PDF</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2 class="section-title">Contacto</h2>
+      <p class="lead">¿Tienes una idea o una vacante? Escríbeme y te respondo.</p>
+      <!-- GitHub Pages es estático; usa mailto o servicios como Formspree/Netlify Forms. -->
+      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain" class="glass" style="padding:16px">
+        <input name="nombre" placeholder="Tu nombre" required />
+        <input name="email" type="email" placeholder="Tu email" required />
+        <textarea name="mensaje" placeholder="Cuéntame..." required></textarea>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <button class="btn primary" type="submit">Enviar</button>
+          <a class="btn ghost" href="https://github.com/TU_USUARIO" target="_blank" rel="noreferrer noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://twitter.com/TU_USUARIO" target="_blank" rel="noreferrer noopener">X/Twitter</a>
+          <a class="btn ghost" href="mailto:tuemail@ejemplo.com">Email</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Tu Nombre · Hecho con ♥ y GitHub Pages
+  </footer>
+
+  <script>
+    // Año en el footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Tema claro/oscuro con persistencia
+    const btn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const applyTheme = (t) => {
+      document.body.classList.toggle('is-light', t === 'light');
+      localStorage.setItem('theme', t);
+    };
+    btn.addEventListener('click', () => {
+      const next = document.body.classList.contains('is-light') ? 'dark' : 'light';
+      applyTheme(next);
+    });
+    (function initTheme(){
+      const stored = localStorage.getItem('theme');
+      if (stored) applyTheme(stored);
+    })();
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries)=>{
+      for (const e of entries){ if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }
+    }, { threshold: .1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
