@@ -25,7 +25,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Blobs */
+/* Blobs decorativos */
 .blob {
   position: fixed;
   z-index: -2;
@@ -81,9 +81,9 @@ header {
 /* Hero */
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
-  align-items: center;
+  align-items: stretch;
   padding: 40px 0 20px;
 }
 @media (max-width: 900px) {
@@ -98,7 +98,15 @@ header {
   backdrop-filter: blur(18px) saturate(160%);
 }
 
-.hero-card { padding: 28px; position: relative; overflow: hidden; }
+.hero-card {
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .hero-title {
   font-size: clamp(28px, 4vw, 52px);
   line-height: 1.05;
@@ -139,10 +147,11 @@ header {
   color: var(--text);
 }
 
-/* Foto grande */
+/* Foto del hero - grande */
 .pfp {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
+  min-height: 460px;
   border-radius: 30px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.18);
@@ -158,12 +167,8 @@ header {
   display: block;
   filter: saturate(105%);
 }
-@media (min-width: 901px) {
-  .hero-card, .pfp { min-height: 380px; }
-  .pfp { max-width: 520px; margin-left: auto; }
-}
 @media (max-width: 900px) {
-  .pfp { max-width: 520px; margin: 0 auto; }
+  .pfp { min-height: 340px; margin: 0 auto; max-width: 520px; }
 }
 
 /* Sections */
@@ -202,14 +207,13 @@ p.lead { color: var(--muted); margin: 0 0 26px; }
 /* Resume */
 .resume { display: grid; grid-template-columns: 1fr .9fr; gap: 20px; }
 @media (max-width: 900px){ .resume { grid-template-columns: 1fr; } }
-.timeline { display: grid; gap: 14px; }
 .item {
   padding: 16px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.06);
 }
-.item .where { opacity: .9; font-weight: 700 }
+.item .where { opacity: .9; font-weight: 700; }
 .item .when { color: var(--muted); font-size: 13px; }
 
 /* Contact */
@@ -258,4 +262,3 @@ footer {
   --text: #111114;
   --muted: #4b4d53;
 }
-
