@@ -81,14 +81,13 @@ header {
 /* ===== HERO ===== */
 .hero {
   display: grid;
+  /* izquierda más ancha; derecha (foto) más estrecha */
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.8fr);
   gap: 24px;
-  align-items: center;
-  padding: 20px 0 10px; /* menos alto */
+  align-items: center;        /* no estirar para evitar distorsión */
+  padding: 20px 0 10px;       /* más compacto */
 }
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-}
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
 
 .glass {
   background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
@@ -105,7 +104,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 300px; /* menos alto */
+  min-height: 300px;          /* menos alto */
 }
 
 .hero-title {
@@ -139,38 +138,37 @@ header {
   padding: 10px 14px;
   font-size: 14px;
 }
-.btn.primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #1b1b1d;
-}
-.btn.ghost {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.14);
-  color: var(--text);
-}
+.btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #1b1b1d; }
+.btn.ghost { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); color: var(--text); }
 
-/* Foto del hero - más pequeña */
+/* ===== FOTO DEL HERO (sin recorte) =====
+   - Más pequeña en general
+   - Mantiene proporción sin cortar (object-fit: contain)
+   - Padding interno para que no toque el borde
+*/
 .pfp {
-  height: 280px;       /* más baja */
-  width: 90%;          /* más estrecha */
-  margin: auto;
+  width: 85%;                 /* más estrecha */
+  max-width: 520px;
+  height: 260px;              /* más baja */
+  margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.18);
-  background: radial-gradient(110% 140% at 90% 10%, rgba(255,255,255,.10), rgba(255,255,255,.04));
-  backdrop-filter: blur(12px) saturate(160%);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 6px 25px rgba(0,0,0,.5);
+  background: radial-gradient(110% 140% at 90% 10%, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 6px 25px rgba(0,0,0,.5);
+  padding: 10px;              /* espacio para que la imagen respire */
 }
 .pfp img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;        /* << clave: muestra la imagen entera */
   object-position: center;
   display: block;
-  filter: saturate(105%);
+  border-radius: 16px;        /* suaviza esquinas interiores */
+  background: #0f0f11;        /* “letterbox” oscuro si sobran bandas */
 }
 @media (max-width: 900px) {
-  .pfp { height: 260px; max-width: 380px; margin: 0 auto; }
+  .pfp { width: 92%; height: 240px; }
 }
 
 /* ===== SECCIONES ===== */
