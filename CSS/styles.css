@@ -81,13 +81,14 @@ header {
 /* ===== HERO ===== */
 .hero {
   display: grid;
-  /* izquierda más ancha; derecha (foto) más estrecha */
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.8fr);
   gap: 24px;
-  align-items: center;        /* no estirar para evitar distorsión */
-  padding: 20px 0 10px;       /* más compacto */
+  align-items: center;
+  padding: 20px 0 10px;
 }
-@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+}
 
 .glass {
   background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
@@ -104,7 +105,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 300px;          /* menos alto */
+  min-height: 300px;
 }
 
 .hero-title {
@@ -138,34 +139,40 @@ header {
   padding: 10px 14px;
   font-size: 14px;
 }
-.btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #1b1b1d; }
-.btn.ghost { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); color: var(--text); }
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #1b1b1d;
+}
+.btn.ghost {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--text);
+}
 
-/* ===== FOTO DEL HERO (sin recorte) =====
-   - Más pequeña en general
-   - Mantiene proporción sin cortar (object-fit: contain)
-   - Padding interno para que no toque el borde
+/* ===== FOTO =====
+   - Se ve completa
+   - Ocupa todo el marco (sin márgenes)
+   - Centrada con leve zoom controlado
 */
 .pfp {
-  width: 85%;                 /* más estrecha */
+  width: 85%;
   max-width: 520px;
-  height: 260px;              /* más baja */
+  height: 260px;
   margin: 0 auto;
-  border-radius: 24px;
+  border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.18);
-  background: radial-gradient(110% 140% at 90% 10%, rgba(255,255,255,.08), rgba(255,255,255,.03));
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 6px 25px rgba(0,0,0,.5);
-  padding: 10px;              /* espacio para que la imagen respire */
+  background: #0f0f11;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 6px 25px rgba(0,0,0,.5);
 }
 .pfp img {
   width: 100%;
   height: 100%;
-  object-fit: contain;        /* << clave: muestra la imagen entera */
-  object-position: center;
+  object-fit: cover;         /* rellena todo el marco */
+  object-position: center 5%;/* centra el rostro verticalmente (ajústalo si hace falta) */
+  transform: scale(1.05);    /* pequeño zoom para que se llene sin recortar demasiado */
   display: block;
-  border-radius: 16px;        /* suaviza esquinas interiores */
-  background: #0f0f11;        /* “letterbox” oscuro si sobran bandas */
+  filter: saturate(108%);
 }
 @media (max-width: 900px) {
   .pfp { width: 92%; height: 240px; }
