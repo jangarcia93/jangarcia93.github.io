@@ -5,13 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Jan García</title>
   <meta name="description" content="Portfolio personal de Jan García: ciberseguridad, sysadmin, proyectos y contacto." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- CSS externo -->
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="canonical" href="https://jangarcia93.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio — Jan García" />
+  <meta property="og:description" content="Ciberseguridad, sysadmin y proyectos técnicos." />
+  <meta property="og:url" content="https://jangarcia93.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://jangarcia93.github.io/assets/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio — Jan García" />
+  <meta name="twitter:description" content="Ciberseguridad, sysadmin y proyectos técnicos." />
+  <meta name="twitter:image" content="https://jangarcia93.github.io/assets/og-image.jpg" />
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f8">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/styles.css" />
 </head>
+
 <body>
+  <a class="skip-link" href="#sobre-mi">Saltar al contenido</a>
+
   <div class="blob one"></div>
   <div class="blob two"></div>
 
@@ -23,7 +43,7 @@
       <a href="#proyectos">Proyectos</a>
       <a href="#cv">CV</a>
       <a href="#contacto">Contacto</a>
-      <button class="btn-theme" id="themeToggle" aria-label="Cambiar tema">🌓</button>
+      <button class="btn-theme" id="themeToggle" aria-label="Cambiar tema" aria-pressed="false">🌓</button>
     </nav>
   </header>
 
@@ -35,15 +55,9 @@
           Técnico en ASIR · Estudiante de Ciberseguridad · Soporte técnico en hosting (DNS, iptables, logs, Linux)
         </p>
         <div class="tagrow">
-          <span class="tag">Linux</span>
-          <span class="tag">DNS</span>
-          <span class="tag">iptables</span>
-          <span class="tag">Logs</span>
-          <span class="tag">Servidores</span>
-          <span class="tag">Bash</span>
-          <span class="tag">Python</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Git</span>
+          <span class="tag">Linux</span><span class="tag">DNS</span><span class="tag">iptables</span>
+          <span class="tag">Logs</span><span class="tag">Servidores</span><span class="tag">Bash</span>
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Git</span>
           <span class="tag">Hacking ético (junior)</span>
         </div>
         <div class="cta">
@@ -54,8 +68,8 @@
         </div>
       </div>
 
-      <div class="pfp" data-reveal>
-        <img src="assets/profile.png" alt="Foto de perfil de Jan García" />
+      <div class="pfp contain" data-reveal>
+        <img src="assets/profile.png" alt="Foto de perfil de Jan García" loading="eager" decoding="async" />
       </div>
     </section>
 
@@ -71,7 +85,7 @@
       <p class="lead">Algunos labs y prácticas orientadas a seguridad y sistemas.</p>
       <div class="grid">
         <article class="card" data-reveal>
-          <div class="thumb"><img src="assets/proyecto1.jpg" alt="Laboratorio de iptables" /></div>
+          <div class="thumb"><img src="assets/proyecto1.jpg" alt="Laboratorio de iptables" loading="lazy" decoding="async" /></div>
           <div class="card-body">
             <h3>Laboratorio de iptables</h3>
             <p>Políticas por defecto, reglas por cadena, hardening básico y pruebas de conectividad.</p>
@@ -80,7 +94,7 @@
         </article>
 
         <article class="card" data-reveal>
-          <div class="thumb"><img src="assets/proyecto2.jpg" alt="Troubleshooting DNS" /></div>
+          <div class="thumb"><img src="assets/proyecto2.jpg" alt="Troubleshooting DNS" loading="lazy" decoding="async" /></div>
           <div class="card-body">
             <h3>DNS Troubleshooting</h3>
             <p>Resolución de incidencias reales: propagación, registros SPF/DKIM/DMARC y cachés.</p>
@@ -89,7 +103,7 @@
         </article>
 
         <article class="card" data-reveal>
-          <div class="thumb"><img src="assets/proyecto3.jpg" alt="Automatización con Bash/Python" /></div>
+          <div class="thumb"><img src="assets/proyecto3.jpg" alt="Automatización con Bash/Python" loading="lazy" decoding="async" /></div>
           <div class="card-body">
             <h3>Scripts de automatización</h3>
             <p>Backups, parsing de logs y checks de salud de servicios con alertas básicas.</p>
@@ -153,7 +167,7 @@
         <div style="display:flex; gap:10px; flex-wrap:wrap">
           <button class="btn primary" type="submit">Enviar</button>
           <a class="btn ghost" href="https://github.com/jangarcia93/jangarcia93.github.io" target="_blank" rel="noreferrer noopener">GitHub</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noreferrer noopener">LinkedIn</a>
           <a class="btn ghost" href="mailto:jangarciamae@gmail.com">Email</a>
         </div>
       </form>
@@ -166,22 +180,28 @@
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    const y = document.getElementById('y');
+    if (y) y.textContent = new Date().getFullYear();
+
     const btn = document.getElementById('themeToggle');
-    const applyTheme = (t) => {
+    const setTheme = (t) => {
       document.body.classList.toggle('is-light', t === 'light');
       localStorage.setItem('theme', t);
+      btn.setAttribute('aria-pressed', String(t === 'light'));
     };
     btn.addEventListener('click', () => {
       const next = document.body.classList.contains('is-light') ? 'dark' : 'light';
-      applyTheme(next);
+      setTheme(next);
     });
     (function initTheme(){
       const stored = localStorage.getItem('theme');
-      if (stored) applyTheme(stored);
+      if (stored) setTheme(stored);
     })();
+
     const io = new IntersectionObserver((entries)=>{
-      for (const e of entries){ if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }
+      for (const e of entries){
+        if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+      }
     }, { threshold: .1 });
     document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
   </script>
