@@ -142,8 +142,8 @@ header {
 
 /* ==== FOTO (ajustada más pequeña) ==== */
 .pfp {
-  width: 60%;               /* antes 100% */
-  max-width: 280px;         /* antes 520px */
+  width: 68%;               /* antes 60% */
+  max-width: 320px;         /* antes 520px */
   aspect-ratio: 3 / 4;
   margin: 0 auto;
   border-radius: 22px;
@@ -169,6 +169,7 @@ header {
   object-fit: contain;
   object-position: center;
   background: #0f0f11;
+  transform: scale(1.03);
 }
 
 @media (max-width: 900px) {
