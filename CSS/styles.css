@@ -111,42 +111,28 @@ header {
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { color: var(--muted); font-weight: 500; margin: 0 0 18px; font-size: 15px; }
-.tagrow { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 20px; }
-/* ==== ICONOS TECNOLOGÍAS ==== */
-.icons {
+/* ==== TECH STACK LIMPIO ==== */
+.tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 26px;
   align-items: center;
+  margin: 18px 0 24px;
 }
 
-.tech-icon {
-  width: 40px;
-  height: 40px;
-  padding: 8px;
-  border-radius: 12px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.14);
-  transition: transform .25s ease, box-shadow .25s ease;
+.tech-stack img {
+  height: 56px;         /* tamaño real visible */
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.05);
+  opacity: 0.9;
+  transition: transform .25s ease, filter .25s ease, opacity .25s ease;
 }
 
-.tech-icon:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(255,64,64,.35);
-}
-
-.tech-icon.small {
-  width: 30px;
-  height: 30px;
-  padding: 6px;
-}
-.tag {
-  padding: 7px 11px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  color: #ffecec;
-  background: rgba(255,64,64,.12);
-  border: 1px solid rgba(255,64,64,.35);
+.tech-stack img:hover {
+  transform: translateY(-4px);
+  filter: grayscale(0%);
+  opacity: 1;
 }
 .cta { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn {
