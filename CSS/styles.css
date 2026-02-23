@@ -111,28 +111,29 @@ header {
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { color: var(--muted); font-weight: 500; margin: 0 0 18px; font-size: 15px; }
-/* ==== TECH STACK LIMPIO ==== */
+/* ==== TECH STACK REDONDO PRO ==== */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 26px;
+  gap: 22px;
   align-items: center;
   margin: 18px 0 24px;
 }
 
 .tech-stack img {
-  height: 56px;         /* tamaño real visible */
-  width: auto;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  filter: grayscale(100%) brightness(1.05);
-  opacity: 0.9;
-  transition: transform .25s ease, filter .25s ease, opacity .25s ease;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .tech-stack img:hover {
-  transform: translateY(-4px);
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(255,64,64,.35);
 }
 .cta { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn {
