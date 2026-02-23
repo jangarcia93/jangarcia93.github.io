@@ -150,11 +150,18 @@ header {
   filter: saturate(1) brightness(1);
 }
 
-/* ==== TOOLTIP ==== */
+/* ==== TOOLTIP FIX ==== */
+
+.tech-item {
+  position: relative;
+  display: inline-flex;
+  overflow: visible;
+}
+
 .tech-item::after {
   content: attr(data-name);
   position: absolute;
-  bottom: -34px;
+  bottom: 110%;   /* ahora sale arriba */
   left: 50%;
   transform: translateX(-50%) translateY(6px);
 
@@ -163,7 +170,7 @@ header {
   padding: 6px 10px;
 
   border-radius: 8px;
-  background: rgba(15,15,18,.95);
+  background: rgba(15,15,18,.98);
   border: 1px solid rgba(255,255,255,.12);
   color: #fff;
 
@@ -171,6 +178,8 @@ header {
   opacity: 0;
   pointer-events: none;
   transition: opacity .2s ease, transform .2s ease;
+
+  z-index: 9999;  /* importante */
 }
 
 .tech-item:hover::after {
