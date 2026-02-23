@@ -120,11 +120,14 @@ header {
   margin: 18px 0 24px;
 }
 
+.tech-item {
+  position: relative;
+  display: inline-flex;
+}
+
 .tech-stack img {
   width: 64px;
   height: 64px;
-
-  /* Reducimos padding */
   padding: 2px;
 
   border-radius: 50%;
@@ -134,19 +137,45 @@ header {
   object-fit: contain;
 
   /* Color ligeramente apagado */
-  filter: saturate(0.9) brightness(0.97);
+  filter: saturate(0.92) brightness(0.98);
 
   transition: transform .25s ease,
               box-shadow .25s ease,
               filter .25s ease;
 }
 
-.tech-stack img:hover {
+.tech-item:hover img {
   transform: translateY(-5px);
   box-shadow: 0 10px 22px rgba(255,64,64,.35);
-
-  /* Color original real */
   filter: saturate(1) brightness(1);
+}
+
+/* ==== TOOLTIP ==== */
+.tech-item::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -34px;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+
+  border-radius: 8px;
+  background: rgba(15,15,18,.95);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #fff;
+
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.tech-item:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 .cta { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn {
