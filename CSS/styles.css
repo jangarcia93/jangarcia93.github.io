@@ -123,16 +123,20 @@ header {
 .tech-stack img {
   width: 64px;
   height: 64px;
-  object-fit: contain;
-  padding: 12px;
+
+  /* Reducimos padding */
+  padding: 4px;
+
   border-radius: 50%;
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.12);
 
-  /* Color ligeramente apagado */
-  filter: saturate(0.85) brightness(0.95);
+  object-fit: contain;
 
-  transition: transform .25s ease, 
+  /* Color ligeramente apagado */
+  filter: saturate(0.9) brightness(0.97);
+
+  transition: transform .25s ease,
               box-shadow .25s ease,
               filter .25s ease;
 }
