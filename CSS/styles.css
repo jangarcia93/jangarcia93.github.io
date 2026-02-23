@@ -111,7 +111,7 @@ header {
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { color: var(--muted); font-weight: 500; margin: 0 0 18px; font-size: 15px; }
-/* ==== TECH STACK REDONDO PRO ==== */
+/* ==== TECH STACK REDONDO SUAVE ==== */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -128,12 +128,21 @@ header {
   border-radius: 50%;
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.12);
-  transition: transform .25s ease, box-shadow .25s ease;
+
+  /* Color ligeramente apagado */
+  filter: saturate(0.85) brightness(0.95);
+
+  transition: transform .25s ease, 
+              box-shadow .25s ease,
+              filter .25s ease;
 }
 
 .tech-stack img:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 22px rgba(255,64,64,.35);
+
+  /* Color original real */
+  filter: saturate(1) brightness(1);
 }
 .cta { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn {
