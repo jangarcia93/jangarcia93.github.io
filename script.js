@@ -462,21 +462,31 @@ function setLanguage(lang) {
   document.documentElement.lang = safeLang;
 }
 
+function updateLanguageButtons(activeLang) {
+  document.querySelectorAll(".lang-btn").forEach((button) => {
+    const isActive = button.getAttribute("data-lang") === activeLang;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const y = document.getElementById("y");
   if (y) y.textContent = new Date().getFullYear();
 
-  const languageSelect = document.getElementById("language-select");
   const savedLanguage = localStorage.getItem("language") || "es";
+  const langButtons = document.querySelectorAll(".lang-btn");
 
-  if (languageSelect) {
-    languageSelect.value = savedLanguage;
-    setLanguage(savedLanguage);
+  setLanguage(savedLanguage);
+  updateLanguageButtons(savedLanguage);
 
-    languageSelect.addEventListener("change", (e) => {
-      setLanguage(e.target.value);
+  langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const lang = button.getAttribute("data-lang");
+      setLanguage(lang);
+      updateLanguageButtons(lang);
     });
-  }
+  });
 
   const io = new IntersectionObserver((entries) => {
     for (const entry of entries) {
