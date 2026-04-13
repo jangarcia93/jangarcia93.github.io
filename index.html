@@ -7,21 +7,18 @@
   <meta name="description" content="Portfolio personal de Jan García: ciberseguridad, sysadmin, proyectos y contacto." />
   <link rel="canonical" href="https://jangarcia93.github.io/" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Portfolio — Jan García" />
   <meta property="og:description" content="Ciberseguridad, sysadmin y proyectos técnicos." />
   <meta property="og:url" content="https://jangarcia93.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://jangarcia93.github.io/assets/og-image.jpg" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Portfolio — Jan García" />
   <meta name="twitter:description" content="Ciberseguridad, sysadmin y proyectos técnicos." />
   <meta name="twitter:image" content="https://jangarcia93.github.io/assets/og-image.jpg" />
 
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f8">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0b">
+  <meta name="theme-color" content="#0a0a0b">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +27,7 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#sobre-mi">Saltar al contenido</a>
+  <a class="skip-link" href="#sobre-mi" data-i18n="skip">Saltar al contenido</a>
 
   <div class="blob one"></div>
   <div class="blob two"></div>
@@ -39,71 +36,54 @@
     <nav class="nav">
       <div class="brand">Jan García</div>
       <div class="spacer"></div>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#cv">CV</a>
-      <a href="#projection">Proyección</a>
-      <a href="#promotion">Promoción</a>  
-      <a href="#contacto">Contacto</a>
-      <button class="btn-theme" id="themeToggle" aria-label="Cambiar tema" aria-pressed="false">🌓</button>
+
+      <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+      <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+      <a href="#cv" data-i18n="nav.cv">CV</a>
+      <a href="#projection" data-i18n="nav.projection">Proyección</a>
+      <a href="#promotion" data-i18n="nav.promotion">Promoción</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+
+      <div class="lang-switcher">
+        <label for="language-select" class="sr-only" data-i18n="lang.label">Idioma</label>
+        <select id="language-select" aria-label="Seleccionar idioma">
+          <option value="es">ES</option>
+          <option value="ca">CA</option>
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
     </nav>
   </header>
 
   <main class="wrap">
     <section class="hero">
       <div class="hero-card glass" data-reveal>
-        <h1 class="hero-title">Hola, soy <span class="grad">Jan García</span></h1>
-        <p class="hero-sub">
+        <h1 class="hero-title">
+          <span data-i18n="hero.hello">Hola, soy</span> <span class="grad">Jan García</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero.sub">
           Técnico en ASIR · Estudiante de Ciberseguridad
         </p>
+
         <div class="tech-stack">
-
-          <div class="tech-item" data-name="Linux">
-            <img src="assets/icons/linux.png" alt="Linux">
-          </div>
-
-          <div class="tech-item" data-name="DNS">
-            <img src="assets/icons/dns.png" alt="DNS">
-          </div>
-
-          <div class="tech-item" data-name="iptables">
-            <img src="assets/icons/iptables.png" alt="iptables">
-          </div>
-
-          <div class="tech-item" data-name="Bash">
-            <img src="assets/icons/bash.png" alt="Bash">
-          </div>
-
-          <div class="tech-item" data-name="Python">
-            <img src="assets/icons/python.png" alt="Python">
-          </div>
-
-          <div class="tech-item" data-name="Git">
-            <img src="assets/icons/git.png" alt="Git">
-          </div>
-
-          <div class="tech-item" data-name="Snort">
-            <img src="assets/icons/snort.png" alt="Snort">
-          </div>
-
-          <div class="tech-item" data-name="Suricata">
-            <img src="assets/icons/suricata.png" alt="Suricata">
-          </div>
-
-          <div class="tech-item" data-name="pfSense">
-            <img src="assets/icons/pfsense.png" alt="pfSense">
-          </div>
-
-          <div class="tech-item" data-name="Wireshark">
-            <img src="assets/icons/wireshark.png" alt="Wireshark">
-          </div>
-
+          <div class="tech-item" data-name="Linux"><img src="assets/icons/linux.png" alt="Linux"></div>
+          <div class="tech-item" data-name="DNS"><img src="assets/icons/dns.png" alt="DNS"></div>
+          <div class="tech-item" data-name="iptables"><img src="assets/icons/iptables.png" alt="iptables"></div>
+          <div class="tech-item" data-name="Bash"><img src="assets/icons/bash.png" alt="Bash"></div>
+          <div class="tech-item" data-name="Python"><img src="assets/icons/python.png" alt="Python"></div>
+          <div class="tech-item" data-name="Git"><img src="assets/icons/git.png" alt="Git"></div>
+          <div class="tech-item" data-name="Snort"><img src="assets/icons/snort.png" alt="Snort"></div>
+          <div class="tech-item" data-name="Suricata"><img src="assets/icons/suricata.png" alt="Suricata"></div>
+          <div class="tech-item" data-name="pfSense"><img src="assets/icons/pfsense.png" alt="pfSense"></div>
+          <div class="tech-item" data-name="Wireshark"><img src="assets/icons/wireshark.png" alt="Wireshark"></div>
         </div>
+
         <div class="cta">
-          <a class="btn primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn ghost" href="#contacto">Hablemos</a>
-          <a class="btn ghost" href="assets/curriculumJanGarcia.pdf" download>Descargar CV</a>
-          <a class="btn ghost" href="https://github.com/jangarcia93/jangarcia93.github.io" target="_blank" rel="noreferrer noopener">Ver mi GitHub</a>
+          <a class="btn primary" href="#proyectos" data-i18n="hero.projects">Ver proyectos</a>
+          <a class="btn ghost" href="#contacto" data-i18n="hero.contact">Hablemos</a>
+          <a class="btn ghost" href="assets/curriculumJanGarcia.pdf" download data-i18n="hero.downloadCv">Descargar CV</a>
+          <a class="btn ghost" href="https://github.com/jangarcia93/jangarcia93.github.io" target="_blank" rel="noreferrer noopener" data-i18n="hero.github">Ver mi GitHub</a>
         </div>
       </div>
 
@@ -113,304 +93,237 @@
     </section>
 
     <section id="sobre-mi">
-      <h2 class="section-title">Sobre mí</h2>
-      <p class="lead">
+      <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
+      <p class="lead" data-i18n="about.text">
         Técnico en ASIR y estudiante de Ciberseguridad con experiencia previa como soporte técnico en entornos de hosting web, gestionando DNS, logs y servidores entre otros ámbitos. Perfil técnico con visión global de sistemas, redes y seguridad. Destaco por mi responsabilidad, adaptabilidad, dominio del inglés y capacidad de trabajo en equipo. Busco seguir desarrollándome en el ámbito del hacking ético y la administración de sistemas seguros.
       </p>
     </section>
 
     <section id="proyectos">
-      <h2 class="section-title">Proyectos destacados</h2>
-      <p class="lead">Algunos labs y prácticas orientadas a seguridad y sistemas.</p>
+      <h2 class="section-title" data-i18n="projects.title">Proyectos destacados</h2>
+      <p class="lead" data-i18n="projects.lead">Algunos labs y prácticas orientadas a seguridad y sistemas.</p>
+
       <div class="grid">
         <article class="card" data-reveal>
           <div class="thumb"><img src="assets/proyecto1.jpg" alt="Laboratorio de iptables" loading="lazy" decoding="async" /></div>
           <div class="card-body">
-            <h3>Laboratorio de iptables</h3>
-            <p>Políticas por defecto, reglas por cadena, hardening básico y pruebas de conectividad.</p>
-            <div class="meta"><span class="tag">Linux</span><span class="tag">iptables</span><span class="tag">Redes</span></div>
+            <h3 data-i18n="projects.p1.title">Laboratorio de iptables</h3>
+            <p data-i18n="projects.p1.text">Políticas por defecto, reglas por cadena, hardening básico y pruebas de conectividad.</p>
+            <div class="meta"><span class="tag">Linux</span><span class="tag">iptables</span><span class="tag" data-i18n="tag.networks">Redes</span></div>
           </div>
         </article>
 
         <article class="card" data-reveal>
           <div class="thumb"><img src="assets/proyecto2.jpg" alt="Troubleshooting DNS" loading="lazy" decoding="async" /></div>
           <div class="card-body">
-            <h3>DNS Troubleshooting</h3>
-            <p>Resolución de incidencias reales: propagación, registros SPF/DKIM/DMARC y cachés.</p>
-            <div class="meta"><span class="tag">DNS</span><span class="tag">Correo</span><span class="tag">CLI</span></div>
+            <h3 data-i18n="projects.p2.title">DNS Troubleshooting</h3>
+            <p data-i18n="projects.p2.text">Resolución de incidencias reales: propagación, registros SPF/DKIM/DMARC y cachés.</p>
+            <div class="meta"><span class="tag">DNS</span><span class="tag" data-i18n="tag.mail">Correo</span><span class="tag">CLI</span></div>
           </div>
         </article>
 
         <article class="card" data-reveal>
           <div class="thumb"><img src="assets/proyecto3.jpg" alt="Automatización con Bash/Python" loading="lazy" decoding="async" /></div>
           <div class="card-body">
-            <h3>Scripts de automatización</h3>
-            <p>Backups, parsing de logs y checks de salud de servicios con alertas básicas.</p>
-            <div class="meta"><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Logs</span></div>
+            <h3 data-i18n="projects.p3.title">Scripts de automatización</h3>
+            <p data-i18n="projects.p3.text">Backups, parsing de logs y checks de salud de servicios con alertas básicas.</p>
+            <div class="meta"><span class="tag">Bash</span><span class="tag">Python</span><span class="tag" data-i18n="tag.logs">Logs</span></div>
           </div>
         </article>
       </div>
     </section>
 
     <section id="cv">
-      <h2 class="section-title">Currículum</h2>
+      <h2 class="section-title" data-i18n="cv.title">Currículum</h2>
       <div class="resume">
         <div>
           <div class="item">
-            <div class="where">Soporte técnico (Customer Care) · Hosting web</div>
+            <div class="where" data-i18n="cv.i1.where">Soporte técnico (Customer Care) · Hosting web</div>
             <div class="when">Mar 2025 — Actualidad</div>
-            <p>Gestión y resolución de incidencias técnicas. Administración de servidores y redes.
-               Monitorización y análisis de logs y tráfico. Asistencia técnica avanzada y orientación al cliente.</p>
+            <p data-i18n="cv.i1.text">Gestión y resolución de incidencias técnicas. Administración de servidores y redes. Monitorización y análisis de logs y tráfico. Asistencia técnica avanzada y orientación al cliente.</p>
           </div>
+
           <div class="item">
-            <div class="where">Institut Serrallarga, Blanes — Técnico informático (prácticas)</div>
+            <div class="where" data-i18n="cv.i2.where">Institut Serrallarga, Blanes — Técnico informático (prácticas)</div>
             <div class="when">Oct 2023 — Abr 2024</div>
-            <p>Gestión de correos, soporte informático a los alumnos y reparaciones de dispositivos.</p>
+            <p data-i18n="cv.i2.text">Gestión de correos, soporte informático a los alumnos y reparaciones de dispositivos.</p>
           </div>
+
           <div class="item">
-            <div class="where">Eduact, Thessaloniki (Grecia) — Técnico informático (Erasmus+)</div>
+            <div class="where" data-i18n="cv.i3.where">Eduact, Thessaloniki (Grecia) — Técnico informático (Erasmus+)</div>
             <div class="when">Abr 2024 — May 2024</div>
-            <p>Soporte técnico en entorno internacional, tareas de mantenimiento y atención a usuarios.</p>
+            <p data-i18n="cv.i3.text">Soporte técnico en entorno internacional, tareas de mantenimiento y atención a usuarios.</p>
           </div>
+
           <div class="item">
-            <div class="where">Grado Superior de ASIR — Institut Sa Palomera, Blanes</div>
+            <div class="where" data-i18n="cv.i4.where">Grado Superior de ASIR — Institut Sa Palomera, Blanes</div>
             <div class="when">Sep 2024 — May 2026</div>
-            <p>Redes, sistemas, virtualización, seguridad básica, scripting (Bash/Python) y bases de datos (SQL).</p>
+            <p data-i18n="cv.i4.text">Redes, sistemas, virtualización, seguridad básica, scripting (Bash/Python) y bases de datos (SQL).</p>
           </div>
+
           <div class="item">
-            <div class="where">Grado Medio de SMR — Institut Sa Palomera, Blanes</div>
+            <div class="where" data-i18n="cv.i5.where">Grado Medio de SMR — Institut Sa Palomera, Blanes</div>
             <div class="when">Sep 2022 — Jun 2024</div>
-            <p>Fundamentos de hardware, sistemas, redes y soporte a usuarios.</p>
+            <p data-i18n="cv.i5.text">Fundamentos de hardware, sistemas, redes y soporte a usuarios.</p>
           </div>
+
           <div class="item">
-            <div class="where">Certificaciones y logros</div>
-            <div class="when">Varios</div>
-            <p>Microsoft Excel 2019 · Microsoft Word 2019 · Microsoft PowerPoint 2019 · Cambridge C1 Advanced.</p>
+            <div class="where" data-i18n="cv.i6.where">Certificaciones y logros</div>
+            <div class="when" data-i18n="cv.i6.when">Varios</div>
+            <p data-i18n="cv.i6.text">Microsoft Excel 2019 · Microsoft Word 2019 · Microsoft PowerPoint 2019 · Cambridge C1 Advanced.</p>
           </div>
         </div>
+
         <aside class="glass" style="padding:18px">
-          <h3 style="margin: 4px 0 10px">Descargar CV</h3>
-          <p class="lead">Versión PDF actualizada y lista para compartir.</p>
-          <a class="btn primary" href="assets/curriculumJanGarcia.pdf" download>Descargar PDF</a>
+          <h3 style="margin: 4px 0 10px" data-i18n="cv.downloadTitle">Descargar CV</h3>
+          <p class="lead" data-i18n="cv.downloadText">Versión PDF actualizada y lista para compartir.</p>
+          <a class="btn primary" href="assets/curriculumJanGarcia.pdf" download data-i18n="cv.downloadBtn">Descargar PDF</a>
         </aside>
       </div>
     </section>
+
     <section id="projection" data-reveal>
-      <h2 class="section-title">Proyección profesional</h2>
-      <p class="lead">
-        Mi objetivo profesional es orientar mi trayectoria hacia el ámbito de la ciberseguridad,
-        partiendo de una base sólida en sistemas, redes y administración de infraestructuras IT.
-        Aunque todavía estoy definiendo en qué área concreta me gustaría especializarme, tengo un
-        interés claro por la seguridad informática y por seguir formándome en este sector.
+      <h2 class="section-title" data-i18n="projection.title">Proyección profesional</h2>
+      <p class="lead" data-i18n="projection.lead">
+        Mi objetivo profesional es orientar mi trayectoria hacia el ámbito de la ciberseguridad, partiendo de una base sólida en sistemas, redes y administración de infraestructuras IT. Aunque todavía estoy definiendo en qué área concreta me gustaría especializarme, tengo un interés claro por la seguridad informática y por seguir formándome en este sector.
       </p>
 
       <div class="projection-grid">
-
         <article class="projection-card">
           <div class="projection-icon">01</div>
-          <h3>Interés profesional</h3>
-
-          <p>
-            Mi intención es desarrollar mi carrera dentro del sector de la ciberseguridad,
-            en un perfil técnico que me permita trabajar con sistemas, redes y protección
-            de infraestructuras tecnológicas.
-          </p>
-
-          <p><strong>Áreas que me interesan especialmente:</strong></p>
+          <h3 data-i18n="projection.c1.title">Interés profesional</h3>
+          <p data-i18n="projection.c1.text">Mi intención es desarrollar mi carrera dentro del sector de la ciberseguridad, en un perfil técnico que me permita trabajar con sistemas, redes y protección de infraestructuras tecnológicas.</p>
+          <p><strong data-i18n="projection.c1.subtitle">Áreas que me interesan especialmente:</strong></p>
           <ul>
-            <li>Seguridad de sistemas y servidores</li>
-            <li>Protección y supervisión de redes</li>
-            <li>Análisis de vulnerabilidades</li>
-            <li>Monitorización y respuesta ante incidentes</li>
-            <li>Seguridad en entornos cloud</li>
+            <li data-i18n="projection.c1.li1">Seguridad de sistemas y servidores</li>
+            <li data-i18n="projection.c1.li2">Protección y supervisión de redes</li>
+            <li data-i18n="projection.c1.li3">Análisis de vulnerabilidades</li>
+            <li data-i18n="projection.c1.li4">Monitorización y respuesta ante incidentes</li>
+            <li data-i18n="projection.c1.li5">Seguridad en entornos cloud</li>
           </ul>
         </article>
 
         <article class="projection-card">
           <div class="projection-icon">02</div>
-          <h3>Entorno profesional deseado</h3>
-
-          <p>
-            Me gustaría trabajar en empresas del sector tecnológico donde pueda continuar aprendiendo
-            y adquirir experiencia real en administración de sistemas, redes y seguridad informática.
-          </p>
-
-          <p><strong>Características de las empresas objetivo:</strong></p>
+          <h3 data-i18n="projection.c2.title">Entorno profesional deseado</h3>
+          <p data-i18n="projection.c2.text">Me gustaría trabajar en empresas del sector tecnológico donde pueda continuar aprendiendo y adquirir experiencia real en administración de sistemas, redes y seguridad informática.</p>
+          <p><strong data-i18n="projection.c2.subtitle">Características de las empresas objetivo:</strong></p>
           <ul>
-            <li>Entornos tecnológicos modernos y en evolución</li>
-            <li>Uso de infraestructuras, redes, servidores o cloud</li>
-            <li>Posibilidad de crecimiento profesional</li>
-            <li>Trabajo técnico orientado a la resolución de problemas</li>
-            <li>Aprendizaje continuo y actualización constante</li>
+            <li data-i18n="projection.c2.li1">Entornos tecnológicos modernos y en evolución</li>
+            <li data-i18n="projection.c2.li2">Uso de infraestructuras, redes, servidores o cloud</li>
+            <li data-i18n="projection.c2.li3">Posibilidad de crecimiento profesional</li>
+            <li data-i18n="projection.c2.li4">Trabajo técnico orientado a la resolución de problemas</li>
+            <li data-i18n="projection.c2.li5">Aprendizaje continuo y actualización constante</li>
           </ul>
         </article>
 
         <article class="projection-card">
           <div class="projection-icon">03</div>
-          <h3>Itinerario formativo</h3>
-
-          <p>
-            Para avanzar hacia este objetivo profesional, mi plan es seguir ampliando mi formación
-            académica y técnica de forma progresiva.
-          </p>
-
+          <h3 data-i18n="projection.c3.title">Itinerario formativo</h3>
+          <p data-i18n="projection.c3.text">Para avanzar hacia este objetivo profesional, mi plan es seguir ampliando mi formación académica y técnica de forma progresiva.</p>
           <ul>
-            <li>Finalizar el CFGS en Administración de Sistemas Informáticos en Red</li>
-            <li>Cursar un grado universitario relacionado con la ciberseguridad</li>
-            <li>Obtener certificaciones técnicas como CompTIA Security+ y otras del ámbito de la seguridad</li>
-            <li>Seguir desarrollando proyectos prácticos y portfolio técnico</li>
-            <li>Mantener una formación continua en sistemas, redes y ciberseguridad</li>
+            <li data-i18n="projection.c3.li1">Finalizar el CFGS en Administración de Sistemas Informáticos en Red</li>
+            <li data-i18n="projection.c3.li2">Cursar un grado universitario relacionado con la ciberseguridad</li>
+            <li data-i18n="projection.c3.li3">Obtener certificaciones técnicas como CompTIA Security+ y otras del ámbito de la seguridad</li>
+            <li data-i18n="projection.c3.li4">Seguir desarrollando proyectos prácticos y portfolio técnico</li>
+            <li data-i18n="projection.c3.li5">Mantener una formación continua en sistemas, redes y ciberseguridad</li>
           </ul>
         </article>
-
       </div>
     </section>
 
     <section id="promotion" data-reveal>
-      <h2 class="section-title">Plan de promoción personal</h2>
-      <p class="lead">
-        Estrategia personal enfocada al crecimiento profesional, la formación continua y la mejora
-        de la empleabilidad dentro del sector tecnológico.
-      </p>
+      <h2 class="section-title" data-i18n="promotion.title">Plan de promoción personal</h2>
+      <p class="lead" data-i18n="promotion.lead">Estrategia personal enfocada al crecimiento profesional, la formación continua y la mejora de la empleabilidad dentro del sector tecnológico.</p>
 
       <div class="promotion-layout">
-
         <div class="glass hero-card promotion-panel">
-          <h3>Estrategias</h3>
+          <h3 data-i18n="promotion.leftTitle">Estrategias</h3>
 
           <div class="strategy-grid">
             <article class="strategy-card">
               <div class="strategy-icon">01</div>
-              <h4>Desarrollo de marca personal</h4>
-              <p>
-                Mantener un perfil profesional activo mediante GitHub, mostrando proyectos reales
-                relacionados con sistemas, redes y ciberseguridad.
-              </p>
+              <h4 data-i18n="promotion.s1.title">Desarrollo de marca personal</h4>
+              <p data-i18n="promotion.s1.text">Mantener un perfil profesional activo mediante GitHub, mostrando proyectos reales relacionados con sistemas, redes y ciberseguridad.</p>
             </article>
 
             <article class="strategy-card">
               <div class="strategy-icon">02</div>
-              <h4>Formación continua</h4>
-              <p>
-                Ampliar conocimientos mediante estudios universitarios, certificaciones y aprendizaje
-                autodidacta en tecnologías y herramientas de seguridad.
-              </p>
+              <h4 data-i18n="promotion.s2.title">Formación continua</h4>
+              <p data-i18n="promotion.s2.text">Ampliar conocimientos mediante estudios universitarios, certificaciones y aprendizaje autodidacta en tecnologías y herramientas de seguridad.</p>
             </article>
 
             <article class="strategy-card">
               <div class="strategy-icon">03</div>
-              <h4>Inserción en el mercado laboral</h4>
-              <p>
-                Buscar oportunidades laborales en el sector IT, priorizando posiciones relacionadas con
-                sistemas, administración y ciberseguridad que permitan adquirir experiencia real.
-              </p>
+              <h4 data-i18n="promotion.s3.title">Inserción en el mercado laboral</h4>
+              <p data-i18n="promotion.s3.text">Buscar oportunidades laborales en el sector IT, priorizando posiciones relacionadas con sistemas, administración y ciberseguridad que permitan adquirir experiencia real.</p>
             </article>
 
             <article class="strategy-card">
               <div class="strategy-icon">04</div>
-              <h4>Networking profesional</h4>
-              <p>
-                Crear y mantener una red de contactos en el sector tecnológico mediante plataformas
-                profesionales, entornos académicos y comunidades del sector.
-              </p>
+              <h4 data-i18n="promotion.s4.title">Networking profesional</h4>
+              <p data-i18n="promotion.s4.text">Crear y mantener una red de contactos en el sector tecnológico mediante plataformas profesionales, entornos académicos y comunidades del sector.</p>
             </article>
           </div>
         </div>
 
         <div class="glass hero-card promotion-panel">
-          <h3>Plan de actuación</h3>
+          <h3 data-i18n="promotion.rightTitle">Plan de actuación</h3>
 
           <div class="roadmap">
             <div class="roadmap-step">
               <div class="roadmap-marker">1</div>
               <div class="roadmap-body">
-                <span class="roadmap-phase">Corto plazo</span>
-                <h4>Consolidación de la base técnica</h4>
-                <p>
-                  Finalizar el CFGS ASIR y reforzar conocimientos en sistemas, redes y seguridad,
-                  desarrollando proyectos prácticos y mejorando el portfolio profesional.
-                </p>
+                <span class="roadmap-phase" data-i18n="promotion.r1.phase">Corto plazo</span>
+                <h4 data-i18n="promotion.r1.title">Consolidación de la base técnica</h4>
+                <p data-i18n="promotion.r1.text">Finalizar el CFGS ASIR y reforzar conocimientos en sistemas, redes y seguridad, desarrollando proyectos prácticos y mejorando el portfolio profesional.</p>
               </div>
             </div>
 
             <div class="roadmap-step">
               <div class="roadmap-marker">2</div>
               <div class="roadmap-body">
-                <span class="roadmap-phase">Medio plazo</span>
-                <h4>Continuidad formativa y especialización</h4>
-                <p>
-                  Iniciar estudios universitarios relacionados con la ciberseguridad y obtener
-                  certificaciones técnicas como CompTIA Security+ y otras orientadas al ámbito
-                  de la seguridad informática.
-                </p>
+                <span class="roadmap-phase" data-i18n="promotion.r2.phase">Medio plazo</span>
+                <h4 data-i18n="promotion.r2.title">Continuidad formativa y especialización</h4>
+                <p data-i18n="promotion.r2.text">Iniciar estudios universitarios relacionados con la ciberseguridad y obtener certificaciones técnicas como CompTIA Security+ y otras orientadas al ámbito de la seguridad informática.</p>
               </div>
             </div>
 
             <div class="roadmap-step">
               <div class="roadmap-marker">3</div>
               <div class="roadmap-body">
-                <span class="roadmap-phase">Largo plazo</span>
-                <h4>Desarrollo profesional en el sector</h4>
-                <p>
-                  Acceder a oportunidades profesionales dentro del sector IT, ganar experiencia real
-                  y orientar progresivamente el perfil hacia áreas de ciberseguridad más específicas.
-                </p>
+                <span class="roadmap-phase" data-i18n="promotion.r3.phase">Largo plazo</span>
+                <h4 data-i18n="promotion.r3.title">Desarrollo profesional en el sector</h4>
+                <p data-i18n="promotion.r3.text">Acceder a oportunidades profesionales dentro del sector IT, ganar experiencia real y orientar progresivamente el perfil hacia áreas de ciberseguridad más específicas.</p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <section id="contacto">
-      <h2 class="section-title">Contacto</h2>
-      <p class="lead">¿Tienes una idea o una vacante? Escríbeme y te respondo.</p>
+      <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+      <p class="lead" data-i18n="contact.lead">¿Tienes una idea o una vacante? Escríbeme y te respondo.</p>
       <form action="mailto:jangarciamae@gmail.com" method="post" enctype="text/plain" class="glass" style="padding:16px">
-        <input name="nombre" placeholder="Tu nombre" required />
-        <input name="email" type="email" placeholder="Tu email" required />
-        <textarea name="mensaje" placeholder="Cuéntame..." required></textarea>
+        <input name="nombre" placeholder="Tu nombre" required data-i18n-placeholder="contact.name" />
+        <input name="email" type="email" placeholder="Tu email" required data-i18n-placeholder="contact.email" />
+        <textarea name="mensaje" placeholder="Cuéntame..." required data-i18n-placeholder="contact.message"></textarea>
         <div style="display:flex; gap:10px; flex-wrap:wrap">
-          <button class="btn primary" type="submit">Enviar</button>
+          <button class="btn primary" type="submit" data-i18n="contact.send">Enviar</button>
           <a class="btn ghost" href="https://github.com/jangarcia93/jangarcia93.github.io" target="_blank" rel="noreferrer noopener">GitHub</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noreferrer noopener">LinkedIn</a>
           <a class="btn ghost" href="mailto:jangarciamae@gmail.com">Email</a>
         </div>
       </form>
-      <p class="lead" style="margin-top:12px">Teléfono: +34 653 791 002</p>
+      <p class="lead" style="margin-top:12px"><span data-i18n="contact.phone">Teléfono</span>: +34 653 791 002</p>
     </section>
   </main>
 
   <footer>
-    © <span id="y"></span> Jan García · Hecho con ♥ y GitHub Pages
+    © <span id="y"></span> Jan García · <span data-i18n="footer.text">Hecho con ♥ y GitHub Pages</span>
   </footer>
 
-  <script>
-    const y = document.getElementById('y');
-    if (y) y.textContent = new Date().getFullYear();
-
-    const btn = document.getElementById('themeToggle');
-    const setTheme = (t) => {
-      document.body.classList.toggle('is-light', t === 'light');
-      localStorage.setItem('theme', t);
-      btn.setAttribute('aria-pressed', String(t === 'light'));
-    };
-    btn.addEventListener('click', () => {
-      const next = document.body.classList.contains('is-light') ? 'dark' : 'light';
-      setTheme(next);
-    });
-    (function initTheme(){
-      const stored = localStorage.getItem('theme');
-      if (stored) setTheme(stored);
-    })();
-
-    const io = new IntersectionObserver((entries)=>{
-      for (const e of entries){
-        if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-      }
-    }, { threshold: .1 });
-    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
