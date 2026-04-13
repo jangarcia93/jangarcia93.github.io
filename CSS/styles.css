@@ -493,3 +493,113 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== ROADMAP / CRONOGRAMA ===== */
+
+.roadmap {
+  position: relative;
+  margin-top: 28px;
+  display: grid;
+  gap: 26px;
+}
+
+.roadmap::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 120, 120, 0.85),
+    rgba(255, 255, 255, 0.12)
+  );
+}
+
+.roadmap-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.roadmap-marker {
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(255,80,80,.95), rgba(255,140,80,.95));
+  box-shadow: 0 8px 18px rgba(255, 90, 90, 0.28);
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.roadmap-body {
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+  backdrop-filter: blur(8px);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.roadmap-body:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,.2);
+  box-shadow: 0 14px 28px rgba(0,0,0,.18);
+}
+
+.roadmap-phase {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: #ffd7d7;
+  background: rgba(255, 90, 90, 0.12);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.roadmap-body h4 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.roadmap-body p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .roadmap-step {
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+  }
+
+  .roadmap::before {
+    left: 15px;
+  }
+
+  .roadmap-marker {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .roadmap-body {
+    padding: 16px;
+  }
+}
