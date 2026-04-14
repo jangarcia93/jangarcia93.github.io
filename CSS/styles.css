@@ -785,34 +785,74 @@ footer {
 /* ==== PROJECT FOOTER ==== */
 .project-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   margin-top: 14px;
-  flex-wrap: wrap;
 }
 
 .project-tools {
   display: flex;
-  align-items: center;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
 }
 
-.project-tool-icon {
-  width: 26px;
-  height: 26px;
+/* cada icono */
+.tool-item {
+  position: relative;
+  display: inline-flex;
+  overflow: visible;
+}
+
+.tool-item img {
+  width: 42px;
+  height: 42px;
+  padding: 6px;
+  display: block;
+
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+
   object-fit: contain;
-  border-radius: 8px;
-  padding: 3px;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.1);
-  transition: transform .2s ease, box-shadow .2s ease;
+
+  transition: transform .25s ease,
+              box-shadow .25s ease,
+              filter .25s ease;
 }
 
-.project-tool-icon:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(255,64,64,.18);
+/* hover */
+.tool-item:hover img {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 22px rgba(255,64,64,.35);
+}
+
+/* tooltip (igual que hero) */
+.tool-item::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+
+  font-size: 12px;
+  padding: 6px 10px;
+
+  border-radius: 8px;
+  background: rgba(15,15,18,.95);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #fff;
+
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.tool-item:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .project-link {
