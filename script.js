@@ -29,6 +29,9 @@ const translations = {
     "skills.programming": "Programación",
     "skills.databases": "Bases de datos",
     "skills.tools": "Herramientas",
+    "skills.virtualization": "Virtualización",
+    "skills.software": "Software profesional",
+    "skills.languages": "Idiomas y certificaciones",
 
     "projects.title": "Proyectos destacados",
     "projects.lead": "Algunos labs y prácticas orientadas a seguridad y sistemas.",
@@ -148,6 +151,9 @@ const translations = {
     "skills.programming": "Programació",
     "skills.databases": "Bases de dades",
     "skills.tools": "Eines",
+    "skills.virtualization": "Virtualització",
+    "skills.software": "Programari professional",
+    "skills.languages": "Idiomes i certificacions",
 
     "projects.title": "Projectes destacats",
     "projects.lead": "Alguns labs i pràctiques orientades a seguretat i sistemes.",
@@ -269,6 +275,9 @@ const translations = {
     "skills.programming": "Programming",
     "skills.databases": "Databases",
     "skills.tools": "Tools",
+    "skills.virtualization": "Virtualization",
+    "skills.software": "Professional software",
+    "skills.languages": "Languages & certifications",
 
     "projects.title": "Featured projects",
     "projects.lead": "Some labs and hands-on work focused on security and systems.",
@@ -390,6 +399,9 @@ const translations = {
     "skills.programming": "Programmierung",
     "skills.databases": "Datenbanken",
     "skills.tools": "Werkzeuge",
+    "skills.virtualization": "Virtualisierung",
+    "skills.software": "Professionelle Software",
+    "skills.languages": "Sprachen und Zertifikate",
 
     "projects.title": "Ausgewählte Projekte",
     "projects.lead": "Einige Labs und praktische Arbeiten mit Fokus auf Sicherheit und Systeme.",
