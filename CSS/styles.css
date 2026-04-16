@@ -359,6 +359,8 @@ p.lead {
   background: rgba(255,255,255,.06);
   box-shadow: 0 8px 20px rgba(0,0,0,.45);
   transition: transform .35s ease, box-shadow .35s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -385,7 +387,7 @@ p.lead {
   padding: 14px 14px 16px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
 }
 
 .card h3 {
