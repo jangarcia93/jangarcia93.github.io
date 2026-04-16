@@ -20,6 +20,16 @@ const translations = {
     "about.title": "Sobre mí",
     "about.text": "Técnico en ASIR y estudiante de Ciberseguridad con experiencia previa como soporte técnico en entornos de hosting web, gestionando DNS, logs y servidores entre otros ámbitos. Perfil técnico con visión global de sistemas, redes y seguridad. Destaco por mi responsabilidad, adaptabilidad, dominio del inglés y capacidad de trabajo en equipo. Busco seguir desarrollándome en el ámbito del hacking ético y la administración de sistemas seguros.",
 
+    "nav.skills": "Skills",
+    "skills.title": "Skills",
+    "skills.lead": "Tecnologías y herramientas con las que trabajo o sobre las que tengo experiencia práctica.",
+    "skills.systems": "Sistemas",
+    "skills.networks": "Redes",
+    "skills.security": "Seguridad",
+    "skills.programming": "Programación",
+    "skills.databases": "Bases de datos",
+    "skills.tools": "Herramientas",
+
     "projects.title": "Proyectos destacados",
     "projects.lead": "Algunos labs y prácticas orientadas a seguridad y sistemas.",
     "projects.p1.title": "Laboratorio IDS/IPS + Ansible",
@@ -128,6 +138,16 @@ const translations = {
 
     "about.title": "Sobre mi",
     "about.text": "Tècnic en ASIX i estudiant de Ciberseguretat amb experiència prèvia com a suport tècnic en entorns de hosting web, gestionant DNS, logs i servidors, entre altres àmbits. Perfil tècnic amb visió global de sistemes, xarxes i seguretat. Destaco per la meva responsabilitat, adaptabilitat, domini de l’anglès i capacitat de treball en equip. Busco continuar desenvolupant-me en l’àmbit del hacking ètic i l’administració de sistemes segurs.",
+
+    "nav.skills": "Skills",
+    "skills.title": "Skills",
+    "skills.lead": "Tecnologies i eines amb les quals treballo o sobre les quals tinc experiència pràctica.",
+    "skills.systems": "Sistemes",
+    "skills.networks": "Xarxes",
+    "skills.security": "Seguretat",
+    "skills.programming": "Programació",
+    "skills.databases": "Bases de dades",
+    "skills.tools": "Eines",
 
     "projects.title": "Projectes destacats",
     "projects.lead": "Alguns labs i pràctiques orientades a seguretat i sistemes.",
@@ -240,6 +260,16 @@ const translations = {
     "about.title": "About me",
     "about.text": "ASIR technician and Cybersecurity student with previous experience as technical support in web hosting environments, managing DNS, logs, and servers among other areas. Technical profile with a broad view of systems, networks, and security. I stand out for responsibility, adaptability, English proficiency, and teamwork skills. I aim to continue developing in ethical hacking and secure systems administration.",
 
+    "nav.skills": "Skills",
+    "skills.title": "Skills",
+    "skills.lead": "Technologies and tools I work with or have practical experience in.",
+    "skills.systems": "Systems",
+    "skills.networks": "Networks",
+    "skills.security": "Security",
+    "skills.programming": "Programming",
+    "skills.databases": "Databases",
+    "skills.tools": "Tools",
+
     "projects.title": "Featured projects",
     "projects.lead": "Some labs and hands-on work focused on security and systems.",
     "projects.p1.title": "IDS/IPS + Ansible Lab",
@@ -350,6 +380,16 @@ const translations = {
 
     "about.title": "Über mich",
     "about.text": "ASIR-Techniker und Student der Cybersicherheit mit vorheriger Erfahrung im technischen Support in Webhosting-Umgebungen, einschließlich Verwaltung von DNS, Logs und Servern. Technisches Profil mit einem umfassenden Blick auf Systeme, Netzwerke und Sicherheit. Ich zeichne mich durch Verantwortungsbewusstsein, Anpassungsfähigkeit, Englischkenntnisse und Teamfähigkeit aus. Ich möchte mich im Bereich Ethical Hacking und sichere Systemadministration weiterentwickeln.",
+
+    "nav.skills": "Skills",
+    "skills.title": "Skills",
+    "skills.lead": "Technologien und Werkzeuge, mit denen ich arbeite oder praktische Erfahrung habe.",
+    "skills.systems": "Systeme",
+    "skills.networks": "Netzwerke",
+    "skills.security": "Sicherheit",
+    "skills.programming": "Programmierung",
+    "skills.databases": "Datenbanken",
+    "skills.tools": "Werkzeuge",
 
     "projects.title": "Ausgewählte Projekte",
     "projects.lead": "Einige Labs und praktische Arbeiten mit Fokus auf Sicherheit und Systeme.",
