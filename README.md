@@ -48,6 +48,7 @@ El sitio está diseñado con un enfoque moderno, responsive y orientado a destac
 ---
 
 ## Estructura del proyecto
+```
 jangarcia93.github.io/
 │
 ├── index.html
@@ -60,7 +61,7 @@ jangarcia93.github.io/
 │   └── profile.png
 ├── script.js
 └── README.md
-
+```
 
 ---
 
