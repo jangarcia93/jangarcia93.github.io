@@ -132,7 +132,7 @@ const translations = {
     "nav.promotion": "Promoció",
     "nav.contact": "Contacte",
 
-    "hero.hello": "Hola, soc",
+    "hero.hello": "Hola, soc en",
     "hero.sub": "Tècnic en ASIX · Estudiant de Ciberseguretat",
     "hero.projects": "Veure projectes",
     "hero.contact": "Parlem",
