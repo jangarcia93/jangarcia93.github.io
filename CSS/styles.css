@@ -1162,10 +1162,12 @@ a.cv-logo-wrap .cv-logo {
   }
 }
 
+/* estado normal */
 .cv-logo--eduact {
   transform: scale(1.6);
 }
 
+/* hover SOLO para eduact */
 .cv-item:hover .cv-logo--eduact {
   transform: scale(1.75);
 }
