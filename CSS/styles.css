@@ -1028,23 +1028,36 @@ footer {
   box-shadow: 0 10px 25px rgba(0,0,0,.3);
 }
 
+
 .cv-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 10px;
-  flex-wrap: wrap;
+  align-items: start;
 }
 
 .cv-header h4 {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 .cv-date {
   font-size: 13px;
   color: var(--muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .cv-header {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-date {
+    text-align: left;
+  }
 }
 
 .cv-sub {
