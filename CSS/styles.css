@@ -1001,7 +1001,7 @@ footer {
 }
 
 /* ==== CV ==== */
-/* ==== CV ==== */
+
 
 .cv-download-bar {
   margin-bottom: 24px;
@@ -1096,20 +1096,25 @@ footer {
   line-height: 1.5;
 }
 
-.cv-logo {
+.cv-logo-wrap {
   position: absolute;
   right: 20px;
   bottom: 20px;
-
   width: 140px;
   height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.cv-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  object-position: center;
-
   opacity: 0.9;
   filter: grayscale(10%) brightness(1.08);
-
   transition: transform .25s ease, opacity .25s ease, filter .25s ease;
   cursor: pointer;
   display: block;
