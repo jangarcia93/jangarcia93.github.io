@@ -421,7 +421,7 @@ p.lead {
   margin-bottom: 8px;
 }
 
-/* ==== CV ==== */
+/* ==== CV ==== 
 .resume {
   display: grid;
   grid-template-columns: 1fr .9fr;
@@ -448,6 +448,7 @@ p.lead {
   color: var(--muted);
   font-size: 13px;
 }
+*/
 
 /* ==== CONTACTO ==== */
 form {
@@ -999,17 +1000,46 @@ footer {
   }
 }
 
-/* ==== CV NUEVO ==== */
+/* ==== CV ==== */
+/* ==== CV ==== */
+
+.cv-download-bar {
+  margin-bottom: 24px;
+  padding: 20px 24px;
+}
+
+.cv-download-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.cv-download-bar h3 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+}
+
+.cv-download-bar p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
 
 .cv-item {
-  padding: 18px;
+  position: relative;
+  padding: 18px 18px 140px 20px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.05);
-  margin-bottom: 16px;
   transition: transform .2s ease, box-shadow .2s ease;
-  position: relative;
-  padding-left: 20px;
 }
 
 .cv-item::before {
@@ -1027,7 +1057,6 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.3);
 }
-
 
 .cv-header {
   display: grid;
@@ -1050,16 +1079,6 @@ footer {
   text-align: right;
 }
 
-@media (max-width: 700px) {
-  .cv-header {
-    grid-template-columns: 1fr;
-  }
-
-  .cv-date {
-    text-align: left;
-  }
-}
-
 .cv-sub {
   margin-top: 4px;
   margin-bottom: 10px;
@@ -1077,24 +1096,15 @@ footer {
   line-height: 1.5;
 }
 
-.cv-item {
-  position: relative;
-}
-
-/* LOGO EMPRESA */
 .cv-logo {
   position: absolute;
   right: 20px;
   bottom: 20px;
-
-  width: 120px;   
+  width: 120px;
   height: 120px;
-
   object-fit: contain;
-
   opacity: 0.85;
   filter: grayscale(10%) brightness(1.1);
-
   transition: transform .25s ease, opacity .25s ease, filter .25s ease;
   cursor: pointer;
 }
@@ -1105,50 +1115,23 @@ footer {
   filter: grayscale(0%) brightness(1);
 }
 
-
-.cv-item {
-  padding-bottom: 140px; /* espacio para el logo */
+@media (max-width: 900px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
+@media (max-width: 700px) {
+  .cv-header {
+    grid-template-columns: 1fr;
+  }
 
+  .cv-date {
+    text-align: left;
+  }
 
-.cv-item:hover .cv-logo {
-  opacity: 0.35;
-  transform: scale(1.15);
-}
-
-
-.cv-item:hover .cv-logo {
-  transform: scale(1.1);
-  opacity: 1;
-  filter: grayscale(0%) brightness(1);
-}
-
-.cv-download {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-
-  padding: 20px;
-  height: fit-content;
-  position: sticky;
-  top: 90px;
-}
-
-.cv-download-content {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.cv-download h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.cv-download p {
-  margin: 0;
-  font-size: 14px;
-  color: var(--muted);
+  .cv-download-bar-content {
+    align-items: flex-start;
+  }
 }
 
