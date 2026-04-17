@@ -1123,9 +1123,3 @@ footer {
   opacity: 1;
   filter: grayscale(0%) brightness(1);
 }
-
-.cv-logo {
-  background: rgba(0,0,0,0.3);
-  padding: 8px;
-  border-radius: 12px;
-}
