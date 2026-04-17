@@ -998,3 +998,69 @@ footer {
     height: 48px;
   }
 }
+
+/* ==== CV NUEVO ==== */
+
+.cv-item {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+  margin-bottom: 16px;
+  transition: transform .2s ease, box-shadow .2s ease;
+  position: relative;
+  padding-left: 20px;
+}
+
+.cv-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), transparent);
+  border-radius: 2px;
+}
+
+.cv-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cv-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.cv-date {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.cv-sub {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.cv-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.cv-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
