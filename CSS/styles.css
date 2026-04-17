@@ -1123,3 +1123,32 @@ footer {
   opacity: 1;
   filter: grayscale(0%) brightness(1);
 }
+
+.cv-download {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.cv-download-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cv-download h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.cv-download p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
