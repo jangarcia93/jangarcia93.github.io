@@ -1042,7 +1042,7 @@ footer {
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.05);
   transition: transform .2s ease, box-shadow .2s ease;
-  min-height: 320px;
+  min-height: 360px;
 }
 
 .cv-item::before {
@@ -1149,3 +1149,10 @@ footer {
   }
 }
 
+.cv-logo--eduact {
+  transform: scale(1.6);
+}
+
+.cv-item:hover .cv-logo--eduact {
+  transform: scale(1.75);
+}
