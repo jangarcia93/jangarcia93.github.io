@@ -1119,14 +1119,27 @@ footer {
   opacity: 0.9;
   filter: grayscale(10%) brightness(1.08);
   transition: transform .25s ease, opacity .25s ease, filter .25s ease;
-  cursor: pointer;
   display: block;
 }
 
-.cv-item:hover .cv-logo {
+/* solo logos clicables */
+a.cv-logo-wrap .cv-logo {
+  cursor: pointer;
+}
+
+.cv-item:hover a.cv-logo-wrap .cv-logo {
   transform: scale(1.08);
   opacity: 1;
   filter: grayscale(0%) brightness(1);
+}
+
+/* certificaciones: no clicable */
+.cv-logo-wrap--static {
+  pointer-events: none;
+}
+
+.cv-logo--static {
+  cursor: default;
 }
 
 @media (max-width: 900px) {
