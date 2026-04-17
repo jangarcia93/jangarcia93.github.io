@@ -1087,39 +1087,37 @@ footer {
   right: 18px;
   bottom: 16px;
 
-  width: 55px;
-  height: 55px;
+  width: 75px;     /* antes 55px → más grande */
+  height: 75px;
+
   object-fit: contain;
 
-  opacity: 0.85;
-  filter: grayscale(100%) brightness(1.2);
+  opacity: 0.6;    /* antes 0.85 con grayscale → ahora más visible */
+  filter: grayscale(40%) brightness(1.1); /* menos apagado */
 
   transition: transform .25s ease, opacity .25s ease, filter .25s ease;
+  cursor: pointer;
 }
 
-/* hover elegante */
+/* hover más claro */
 .cv-item:hover .cv-logo {
-  transform: scale(1.1);
+  transform: scale(1.15);
   opacity: 1;
   filter: grayscale(0%) brightness(1);
 }
 
+
 .cv-item {
-  padding-bottom: 70px; /* espacio para el logo */
+  padding-bottom: 90px; /* espacio para el logo */
 }
 
-.cv-logo {
-  opacity: 0.15;
-  filter: grayscale(100%);
-}
+
 
 .cv-item:hover .cv-logo {
   opacity: 0.35;
   transform: scale(1.15);
 }
-.cv-logo {
-  cursor: pointer;
-}
+
 
 .cv-item:hover .cv-logo {
   transform: scale(1.1);
