@@ -1077,3 +1077,52 @@ footer {
   line-height: 1.5;
 }
 
+.cv-item {
+  position: relative;
+}
+
+/* LOGO EMPRESA */
+.cv-logo {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+
+  opacity: 0.85;
+  filter: grayscale(100%) brightness(1.2);
+
+  transition: transform .25s ease, opacity .25s ease, filter .25s ease;
+}
+
+/* hover elegante */
+.cv-item:hover .cv-logo {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: grayscale(0%) brightness(1);
+}
+
+.cv-item {
+  padding-bottom: 70px; /* espacio para el logo */
+}
+
+.cv-logo {
+  opacity: 0.15;
+  filter: grayscale(100%);
+}
+
+.cv-item:hover .cv-logo {
+  opacity: 0.35;
+  transform: scale(1.15);
+}
+.cv-logo {
+  cursor: pointer;
+}
+
+.cv-item:hover .cv-logo {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: grayscale(0%) brightness(1);
+}
