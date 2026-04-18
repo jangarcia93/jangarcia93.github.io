@@ -44,23 +44,55 @@ const translations = {
     "tag.mail": "Correo",
     "tag.logs": "Logs",
 
-    "cv.title": "Currículum",
-    "cv.i1.where": "Soporte técnico (Customer Care) · Hosting web",
-    "cv.i1.text": "Gestión y resolución de incidencias técnicas. Administración de servidores y redes. Monitorización y análisis de logs y tráfico. Asistencia técnica avanzada y orientación al cliente.",
-    "cv.i2.where": "Institut Serrallarga, Blanes — Técnico informático (prácticas)",
-    "cv.i2.text": "Gestión de correos, soporte informático a los alumnos y reparaciones de dispositivos.",
-    "cv.i3.where": "Eduact, Thessaloniki (Grecia) — Técnico informático (Erasmus+)",
-    "cv.i3.text": "Soporte técnico en entorno internacional, tareas de mantenimiento y atención a usuarios.",
-    "cv.i4.where": "Grado Superior de ASIR — Institut Sa Palomera, Blanes",
-    "cv.i4.text": "Redes, sistemas, virtualización, seguridad básica, scripting (Bash/Python) y bases de datos (SQL).",
-    "cv.i5.where": "Grado Medio de SMR — Institut Sa Palomera, Blanes",
-    "cv.i5.text": "Fundamentos de hardware, sistemas, redes y soporte a usuarios.",
-    "cv.i6.where": "Certificaciones y logros",
-    "cv.i6.when": "Varios",
-    "cv.i6.text": "Microsoft Excel 2019 · Microsoft Word 2019 · Microsoft PowerPoint 2019 · Cambridge C1 Advanced.",
-    "cv.downloadTitle": "Descargar CV",
-    "cv.downloadText": "Versión PDF actualizada y lista para compartir.",
-    "cv.downloadBtn": "Descargar PDF",
+    cv: {
+            download: {
+                title: "Descargar CV",
+                text: "Versión actualizada en PDF.",
+                btn: "Descargar PDF"
+            },
+            cdmon: {
+                role: "Soporte técnico (Customer Care)",
+                l1: "Gestión y resolución de incidencias técnicas en entornos de hosting",
+                l2: "Administración básica de servidores y redes",
+                l3: "Monitorización y análisis de logs y tráfico",
+                l4: "Soporte técnico avanzado y atención al cliente"
+            },
+            serra: {
+                role: "Técnico informático en prácticas",
+                l1: "Gestión de correos",
+                l2: "Soporte informático a los alumnos",
+                l3: "Reparaciones de dispositivos"
+            },
+            eduact: {
+                role: "Técnico informático (Erasmus+)",
+                l1: "Soporte técnico en entorno internacional",
+                l2: "Tareas de mantenimiento",
+                l3: "Atención a usuarios"
+            },
+            asir: {
+                role: "Administración de Sistemas Informáticos en Red",
+                l1: "Redes",
+                l2: "Sistemas",
+                l3: "Virtualización",
+                l4: "Seguridad básica",
+                l5: "Scripting (Bash/Python)",
+                l6: "Bases de datos (SQL)"
+            },
+            smr: {
+                role: "Sistemas Microinformáticos y Redes",
+                l1: "Fundamentos de hardware",
+                l2: "Sistemas",
+                l3: "Redes",
+                l4: "Soporte a usuarios"
+            },
+            cert: {
+                title: "Certificaciones y logros",
+                l1: "Microsoft Excel 2019",
+                l2: "Microsoft Word 2019",
+                l3: "Microsoft PowerPoint 2019",
+                l4: "Cambridge C1 Advanced"
+            }
+            },
 
     "projection.title": "Proyección profesional",
     "projection.lead": "Mi objetivo profesional es orientar mi trayectoria hacia el ámbito de la ciberseguridad, partiendo de una base sólida en sistemas, redes y administración de infraestructuras IT. Aunque todavía estoy definiendo en qué área concreta me gustaría especializarme, tengo un interés claro por la seguridad informática y por seguir formándome en este sector.",
@@ -168,23 +200,55 @@ const translations = {
     "tag.mail": "Correu",
     "tag.logs": "Logs",
 
-    "cv.title": "Currículum",
-    "cv.i1.where": "Suport tècnic (Customer Care) · Hosting web",
-    "cv.i1.text": "Gestió i resolució d'incidències tècniques. Administració de servidors i xarxes. Monitorització i anàlisi de logs i trànsit. Assistència tècnica avançada i orientació al client.",
-    "cv.i2.where": "Institut Serrallarga, Blanes — Tècnic informàtic (pràctiques)",
-    "cv.i2.text": "Gestió de correus, suport informàtic als alumnes i reparacions de dispositius.",
-    "cv.i3.where": "Eduact, Thessaloniki (Grècia) — Tècnic informàtic (Erasmus+)",
-    "cv.i3.text": "Suport tècnic en entorn internacional, tasques de manteniment i atenció a usuaris.",
-    "cv.i4.where": "Grau Superior d'ASIX — Institut Sa Palomera, Blanes",
-    "cv.i4.text": "Xarxes, sistemes, virtualització, seguretat bàsica, scripting (Bash/Python) i bases de dades (SQL).",
-    "cv.i5.where": "Grau Mitjà d'SMX — Institut Sa Palomera, Blanes",
-    "cv.i5.text": "Fonaments de maquinari, sistemes, xarxes i suport a usuaris.",
-    "cv.i6.where": "Certificacions i assoliments",
-    "cv.i6.when": "Diversos",
-    "cv.i6.text": "Microsoft Excel 2019 · Microsoft Word 2019 · Microsoft PowerPoint 2019 · Cambridge C1 Advanced.",
-    "cv.downloadTitle": "Descarregar CV",
-    "cv.downloadText": "Versió PDF actualitzada i llesta per compartir.",
-    "cv.downloadBtn": "Descarregar PDF",
+   cv: {
+        download: {
+            title: "Descarregar CV",
+            text: "Versió actualitzada en PDF.",
+            btn: "Descarregar PDF"
+        },
+        cdmon: {
+            role: "Suport tècnic (Customer Care)",
+            l1: "Gestió i resolució d’incidències tècniques en entorns de hosting",
+            l2: "Administració bàsica de servidors i xarxes",
+            l3: "Monitorització i anàlisi de logs i trànsit",
+            l4: "Suport tècnic avançat i atenció al client"
+        },
+        serra: {
+            role: "Tècnic informàtic en pràctiques",
+            l1: "Gestió de correus",
+            l2: "Suport informàtic als alumnes",
+            l3: "Reparació de dispositius"
+        },
+        eduact: {
+            role: "Tècnic informàtic (Erasmus+)",
+            l1: "Suport tècnic en entorn internacional",
+            l2: "Tasques de manteniment",
+            l3: "Atenció a usuaris"
+        },
+        asir: {
+            role: "Administració de Sistemes Informàtics en Xarxa",
+            l1: "Xarxes",
+            l2: "Sistemes",
+            l3: "Virtualització",
+            l4: "Seguretat bàsica",
+            l5: "Scripting (Bash/Python)",
+            l6: "Bases de dades (SQL)"
+        },
+        smr: {
+            role: "Sistemes Microinformàtics i Xarxes",
+            l1: "Fonaments de maquinari",
+            l2: "Sistemes",
+            l3: "Xarxes",
+            l4: "Suport a usuaris"
+        },
+        cert: {
+            title: "Certificacions i assoliments",
+            l1: "Microsoft Excel 2019",
+            l2: "Microsoft Word 2019",
+            l3: "Microsoft PowerPoint 2019",
+            l4: "Cambridge C1 Advanced"
+        }
+        },
 
     "projection.title": "Projecció professional",
     "projection.lead": "El meu objectiu professional és orientar la meva trajectòria cap a l’àmbit de la ciberseguretat, partint d’una base sòlida en sistemes, xarxes i administració d’infraestructures IT. Encara estic definint en quina àrea concreta m’agradaria especialitzar-me, però tinc un interès clar per la seguretat informàtica i per continuar formant-me en aquest sector.",
@@ -292,23 +356,55 @@ const translations = {
     "tag.mail": "Mail",
     "tag.logs": "Logs",
 
-    "cv.title": "Resume",
-    "cv.i1.where": "Technical Support (Customer Care) · Web hosting",
-    "cv.i1.text": "Management and resolution of technical issues. Server and network administration. Monitoring and analysis of logs and traffic. Advanced technical support and customer guidance.",
-    "cv.i2.where": "Institut Serrallarga, Blanes — IT Technician (internship)",
-    "cv.i2.text": "Email management, IT support for students, and device repair.",
-    "cv.i3.where": "Eduact, Thessaloniki (Greece) — IT Technician (Erasmus+)",
-    "cv.i3.text": "Technical support in an international environment, maintenance tasks, and user assistance.",
-    "cv.i4.where": "Higher Degree in ASIR — Institut Sa Palomera, Blanes",
-    "cv.i4.text": "Networks, systems, virtualization, basic security, scripting (Bash/Python), and databases (SQL).",
-    "cv.i5.where": "Intermediate Degree in SMR — Institut Sa Palomera, Blanes",
-    "cv.i5.text": "Hardware, systems, networks, and user support fundamentals.",
-    "cv.i6.where": "Certifications and achievements",
-    "cv.i6.when": "Various",
-    "cv.i6.text": "Microsoft Excel 2019 · Microsoft Word 2019 · Microsoft PowerPoint 2019 · Cambridge C1 Advanced.",
-    "cv.downloadTitle": "Download CV",
-    "cv.downloadText": "Updated PDF version ready to share.",
-    "cv.downloadBtn": "Download PDF",
+    cv: {
+        download: {
+            title: "Download CV",
+            text: "Updated PDF version.",
+            btn: "Download PDF"
+        },
+        cdmon: {
+            role: "Technical Support (Customer Care)",
+            l1: "Management and resolution of technical incidents in hosting environments",
+            l2: "Basic server and network administration",
+            l3: "Monitoring and analysis of logs and traffic",
+            l4: "Advanced technical support and customer assistance"
+        },
+        serra: {
+            role: "IT Technician (Internship)",
+            l1: "Email management",
+            l2: "IT support for students",
+            l3: "Device repairs"
+        },
+        eduact: {
+            role: "IT Technician (Erasmus+)",
+            l1: "Technical support in an international environment",
+            l2: "Maintenance tasks",
+            l3: "User support"
+        },
+        asir: {
+            role: "Network Systems Administration",
+            l1: "Networking",
+            l2: "Systems",
+            l3: "Virtualization",
+            l4: "Basic security",
+            l5: "Scripting (Bash/Python)",
+            l6: "Databases (SQL)"
+        },
+        smr: {
+            role: "Microcomputer Systems and Networks",
+            l1: "Hardware fundamentals",
+            l2: "Systems",
+            l3: "Networking",
+            l4: "User support"
+        },
+        cert: {
+            title: "Certifications and Achievements",
+            l1: "Microsoft Excel 2019",
+            l2: "Microsoft Word 2019",
+            l3: "Microsoft PowerPoint 2019",
+            l4: "Cambridge C1 Advanced"
+        }
+        },
 
     "projection.title": "Career path",
     "projection.lead": "My professional goal is to guide my career toward cybersecurity, building on a solid foundation in systems, networks, and IT infrastructure administration. Although I am still defining which specific area I would like to specialize in, I have a clear interest in information security and in continuing my education in this field.",
@@ -416,23 +512,55 @@ const translations = {
     "tag.mail": "E-Mail",
     "tag.logs": "Logs",
 
-    "cv.title": "Lebenslauf",
-    "cv.i1.where": "Technischer Support (Customer Care) · Webhosting",
-    "cv.i1.text": "Verwaltung und Lösung technischer Vorfälle. Server- und Netzwerkadministration. Überwachung und Analyse von Logs und Datenverkehr. Erweiterter technischer Support und Kundenberatung.",
-    "cv.i2.where": "Institut Serrallarga, Blanes — IT-Techniker (Praktikum)",
-    "cv.i2.text": "E-Mail-Verwaltung, IT-Support für Schüler und Reparatur von Geräten.",
-    "cv.i3.where": "Eduact, Thessaloniki (Griechenland) — IT-Techniker (Erasmus+)",
-    "cv.i3.text": "Technischer Support in internationalem Umfeld, Wartungsaufgaben und Benutzerbetreuung.",
-    "cv.i4.where": "Höherer Abschluss ASIR — Institut Sa Palomera, Blanes",
-    "cv.i4.text": "Netzwerke, Systeme, Virtualisierung, grundlegende Sicherheit, Scripting (Bash/Python) und Datenbanken (SQL).",
-    "cv.i5.where": "Mittlerer Abschluss SMR — Institut Sa Palomera, Blanes",
-    "cv.i5.text": "Grundlagen von Hardware, Systemen, Netzwerken und Benutzersupport.",
-    "cv.i6.where": "Zertifikate und Erfolge",
-    "cv.i6.when": "Verschiedenes",
-    "cv.i6.text": "Microsoft Excel 2019 · Microsoft Word 2019 · Microsoft PowerPoint 2019 · Cambridge C1 Advanced.",
-    "cv.downloadTitle": "Lebenslauf herunterladen",
-    "cv.downloadText": "Aktuelle PDF-Version, bereit zum Teilen.",
-    "cv.downloadBtn": "PDF herunterladen",
+    cv: {
+        download: {
+            title: "Lebenslauf herunterladen",
+            text: "Aktualisierte PDF-Version.",
+            btn: "PDF herunterladen"
+        },
+        cdmon: {
+            role: "Technischer Support (Customer Care)",
+            l1: "Bearbeitung und Lösung technischer Vorfälle im Hosting-Bereich",
+            l2: "Grundlegende Server- und Netzwerkadministration",
+            l3: "Überwachung und Analyse von Logs und Datenverkehr",
+            l4: "Erweiterter technischer Support und Kundenbetreuung"
+        },
+        serra: {
+            role: "IT-Techniker (Praktikum)",
+            l1: "E-Mail-Verwaltung",
+            l2: "IT-Support für Schüler",
+            l3: "Gerätereparaturen"
+        },
+        eduact: {
+            role: "IT-Techniker (Erasmus+)",
+            l1: "Technischer Support in einem internationalen Umfeld",
+            l2: "Wartungsaufgaben",
+            l3: "Benutzerunterstützung"
+        },
+        asir: {
+            role: "Netzwerk-Systemadministration",
+            l1: "Netzwerke",
+            l2: "Systeme",
+            l3: "Virtualisierung",
+            l4: "Grundlegende Sicherheit",
+            l5: "Skripting (Bash/Python)",
+            l6: "Datenbanken (SQL)"
+        },
+        smr: {
+            role: "Mikrocomputer-Systeme und Netzwerke",
+            l1: "Hardware-Grundlagen",
+            l2: "Systeme",
+            l3: "Netzwerke",
+            l4: "Benutzersupport"
+        },
+        cert: {
+            title: "Zertifikate und Erfolge",
+            l1: "Microsoft Excel 2019",
+            l2: "Microsoft Word 2019",
+            l3: "Microsoft PowerPoint 2019",
+            l4: "Cambridge C1 Advanced"
+        }
+        },
 
     "projection.title": "Berufliche Perspektive",
     "projection.lead": "Mein berufliches Ziel ist es, meine Laufbahn in Richtung Cybersicherheit zu lenken, aufbauend auf einer soliden Grundlage in Systemen, Netzwerken und IT-Infrastrukturverwaltung. Obwohl ich noch definiere, auf welchen konkreten Bereich ich mich spezialisieren möchte, habe ich ein klares Interesse an Informationssicherheit und daran, mich in diesem Bereich weiterzubilden.",
