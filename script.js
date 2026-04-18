@@ -44,55 +44,45 @@ const translations = {
     "tag.mail": "Correo",
     "tag.logs": "Logs",
 
-    cv: {
-            download: {
-                title: "Descargar CV",
-                text: "Versión actualizada en PDF.",
-                btn: "Descargar PDF"
-            },
-            cdmon: {
-                role: "Soporte técnico (Customer Care)",
-                l1: "Gestión y resolución de incidencias técnicas en entornos de hosting",
-                l2: "Administración básica de servidores y redes",
-                l3: "Monitorización y análisis de logs y tráfico",
-                l4: "Soporte técnico avanzado y atención al cliente"
-            },
-            serra: {
-                role: "Técnico informático en prácticas",
-                l1: "Gestión de correos",
-                l2: "Soporte informático a los alumnos",
-                l3: "Reparaciones de dispositivos"
-            },
-            eduact: {
-                role: "Técnico informático (Erasmus+)",
-                l1: "Soporte técnico en entorno internacional",
-                l2: "Tareas de mantenimiento",
-                l3: "Atención a usuarios"
-            },
-            asir: {
-                role: "Administración de Sistemas Informáticos en Red",
-                l1: "Redes",
-                l2: "Sistemas",
-                l3: "Virtualización",
-                l4: "Seguridad básica",
-                l5: "Scripting (Bash/Python)",
-                l6: "Bases de datos (SQL)"
-            },
-            smr: {
-                role: "Sistemas Microinformáticos y Redes",
-                l1: "Fundamentos de hardware",
-                l2: "Sistemas",
-                l3: "Redes",
-                l4: "Soporte a usuarios"
-            },
-            cert: {
-                title: "Certificaciones y logros",
-                l1: "Microsoft Excel 2019",
-                l2: "Microsoft Word 2019",
-                l3: "Microsoft PowerPoint 2019",
-                l4: "Cambridge C1 Advanced"
-            }
-            },
+    "cv.download.title": "Descargar CV",
+    "cv.download.text": "Versión actualizada en PDF.",
+    "cv.download.btn": "Descargar PDF",
+
+    "cv.cdmon.role": "Soporte técnico (Customer Care)",
+    "cv.cdmon.l1": "Gestión y resolución de incidencias técnicas en entornos de hosting",
+    "cv.cdmon.l2": "Administración básica de servidores y redes",
+    "cv.cdmon.l3": "Monitorización y análisis de logs y tráfico",
+    "cv.cdmon.l4": "Soporte técnico avanzado y atención al cliente",
+
+    "cv.serra.role": "Técnico informático en prácticas",
+    "cv.serra.l1": "Gestión de correos",
+    "cv.serra.l2": "Soporte informático a los alumnos",
+    "cv.serra.l3": "Reparaciones de dispositivos",
+
+    "cv.eduact.role": "Técnico informático (Erasmus+)",
+    "cv.eduact.l1": "Soporte técnico en entorno internacional",
+    "cv.eduact.l2": "Tareas de mantenimiento",
+    "cv.eduact.l3": "Atención a usuarios",
+
+    "cv.asir.role": "Administración de Sistemas Informáticos en Red",
+    "cv.asir.l1": "Redes",
+    "cv.asir.l2": "Sistemas",
+    "cv.asir.l3": "Virtualización",
+    "cv.asir.l4": "Seguridad básica",
+    "cv.asir.l5": "Scripting (Bash/Python)",
+    "cv.asir.l6": "Bases de datos (SQL)",
+
+    "cv.smr.role": "Sistemas Microinformáticos y Redes",
+    "cv.smr.l1": "Fundamentos de hardware",
+    "cv.smr.l2": "Sistemas",
+    "cv.smr.l3": "Redes",
+    "cv.smr.l4": "Soporte a usuarios",
+
+    "cv.cert.title": "Certificaciones y logros",
+    "cv.cert.l1": "Microsoft Excel 2019",
+    "cv.cert.l2": "Microsoft Word 2019",
+    "cv.cert.l3": "Microsoft PowerPoint 2019",
+    "cv.cert.l4": "Cambridge C1 Advanced",
 
     "projection.title": "Proyección profesional",
     "projection.lead": "Mi objetivo profesional es orientar mi trayectoria hacia el ámbito de la ciberseguridad, partiendo de una base sólida en sistemas, redes y administración de infraestructuras IT. Aunque todavía estoy definiendo en qué área concreta me gustaría especializarme, tengo un interés claro por la seguridad informática y por seguir formándome en este sector.",
@@ -200,55 +190,45 @@ const translations = {
     "tag.mail": "Correu",
     "tag.logs": "Logs",
 
-   cv: {
-        download: {
-            title: "Descarregar CV",
-            text: "Versió actualitzada en PDF.",
-            btn: "Descarregar PDF"
-        },
-        cdmon: {
-            role: "Suport tècnic (Customer Care)",
-            l1: "Gestió i resolució d’incidències tècniques en entorns de hosting",
-            l2: "Administració bàsica de servidors i xarxes",
-            l3: "Monitorització i anàlisi de logs i trànsit",
-            l4: "Suport tècnic avançat i atenció al client"
-        },
-        serra: {
-            role: "Tècnic informàtic en pràctiques",
-            l1: "Gestió de correus",
-            l2: "Suport informàtic als alumnes",
-            l3: "Reparació de dispositius"
-        },
-        eduact: {
-            role: "Tècnic informàtic (Erasmus+)",
-            l1: "Suport tècnic en entorn internacional",
-            l2: "Tasques de manteniment",
-            l3: "Atenció a usuaris"
-        },
-        asir: {
-            role: "Administració de Sistemes Informàtics en Xarxa",
-            l1: "Xarxes",
-            l2: "Sistemes",
-            l3: "Virtualització",
-            l4: "Seguretat bàsica",
-            l5: "Scripting (Bash/Python)",
-            l6: "Bases de dades (SQL)"
-        },
-        smr: {
-            role: "Sistemes Microinformàtics i Xarxes",
-            l1: "Fonaments de maquinari",
-            l2: "Sistemes",
-            l3: "Xarxes",
-            l4: "Suport a usuaris"
-        },
-        cert: {
-            title: "Certificacions i assoliments",
-            l1: "Microsoft Excel 2019",
-            l2: "Microsoft Word 2019",
-            l3: "Microsoft PowerPoint 2019",
-            l4: "Cambridge C1 Advanced"
-        }
-        },
+    "cv.download.title": "Descarregar CV",
+    "cv.download.text": "Versió actualitzada en PDF.",
+    "cv.download.btn": "Descarregar PDF",
+
+    "cv.cdmon.role": "Suport tècnic (Customer Care)",
+    "cv.cdmon.l1": "Gestió i resolució d'incidències tècniques en entorns de hosting",
+    "cv.cdmon.l2": "Administració bàsica de servidors i xarxes",
+    "cv.cdmon.l3": "Monitorització i anàlisi de logs i trànsit",
+    "cv.cdmon.l4": "Suport tècnic avançat i atenció al client",
+
+    "cv.serra.role": "Tècnic informàtic en pràctiques",
+    "cv.serra.l1": "Gestió de correus",
+    "cv.serra.l2": "Suport informàtic als alumnes",
+    "cv.serra.l3": "Reparació de dispositius",
+
+    "cv.eduact.role": "Tècnic informàtic (Erasmus+)",
+    "cv.eduact.l1": "Suport tècnic en entorn internacional",
+    "cv.eduact.l2": "Tasques de manteniment",
+    "cv.eduact.l3": "Atenció a usuaris",
+
+    "cv.asir.role": "Administració de Sistemes Informàtics en Xarxa",
+    "cv.asir.l1": "Xarxes",
+    "cv.asir.l2": "Sistemes",
+    "cv.asir.l3": "Virtualització",
+    "cv.asir.l4": "Seguretat bàsica",
+    "cv.asir.l5": "Scripting (Bash/Python)",
+    "cv.asir.l6": "Bases de dades (SQL)",
+
+    "cv.smr.role": "Sistemes Microinformàtics i Xarxes",
+    "cv.smr.l1": "Fonaments de maquinari",
+    "cv.smr.l2": "Sistemes",
+    "cv.smr.l3": "Xarxes",
+    "cv.smr.l4": "Suport a usuaris",
+
+    "cv.cert.title": "Certificacions i assoliments",
+    "cv.cert.l1": "Microsoft Excel 2019",
+    "cv.cert.l2": "Microsoft Word 2019",
+    "cv.cert.l3": "Microsoft PowerPoint 2019",
+    "cv.cert.l4": "Cambridge C1 Advanced",
 
     "projection.title": "Projecció professional",
     "projection.lead": "El meu objectiu professional és orientar la meva trajectòria cap a l’àmbit de la ciberseguretat, partint d’una base sòlida en sistemes, xarxes i administració d’infraestructures IT. Encara estic definint en quina àrea concreta m’agradaria especialitzar-me, però tinc un interès clar per la seguretat informàtica i per continuar formant-me en aquest sector.",
@@ -356,55 +336,45 @@ const translations = {
     "tag.mail": "Mail",
     "tag.logs": "Logs",
 
-    cv: {
-        download: {
-            title: "Download CV",
-            text: "Updated PDF version.",
-            btn: "Download PDF"
-        },
-        cdmon: {
-            role: "Technical Support (Customer Care)",
-            l1: "Management and resolution of technical incidents in hosting environments",
-            l2: "Basic server and network administration",
-            l3: "Monitoring and analysis of logs and traffic",
-            l4: "Advanced technical support and customer assistance"
-        },
-        serra: {
-            role: "IT Technician (Internship)",
-            l1: "Email management",
-            l2: "IT support for students",
-            l3: "Device repairs"
-        },
-        eduact: {
-            role: "IT Technician (Erasmus+)",
-            l1: "Technical support in an international environment",
-            l2: "Maintenance tasks",
-            l3: "User support"
-        },
-        asir: {
-            role: "Network Systems Administration",
-            l1: "Networking",
-            l2: "Systems",
-            l3: "Virtualization",
-            l4: "Basic security",
-            l5: "Scripting (Bash/Python)",
-            l6: "Databases (SQL)"
-        },
-        smr: {
-            role: "Microcomputer Systems and Networks",
-            l1: "Hardware fundamentals",
-            l2: "Systems",
-            l3: "Networking",
-            l4: "User support"
-        },
-        cert: {
-            title: "Certifications and Achievements",
-            l1: "Microsoft Excel 2019",
-            l2: "Microsoft Word 2019",
-            l3: "Microsoft PowerPoint 2019",
-            l4: "Cambridge C1 Advanced"
-        }
-        },
+    "cv.download.title": "Download CV",
+    "cv.download.text": "Updated PDF version.",
+    "cv.download.btn": "Download PDF",
+
+    "cv.cdmon.role": "Technical Support (Customer Care)",
+    "cv.cdmon.l1": "Management and resolution of technical incidents in hosting environments",
+    "cv.cdmon.l2": "Basic server and network administration",
+    "cv.cdmon.l3": "Monitoring and analysis of logs and traffic",
+    "cv.cdmon.l4": "Advanced technical support and customer assistance",
+
+    "cv.serra.role": "IT Technician (Internship)",
+    "cv.serra.l1": "Email management",
+    "cv.serra.l2": "IT support for students",
+    "cv.serra.l3": "Device repairs",
+
+    "cv.eduact.role": "IT Technician (Erasmus+)",
+    "cv.eduact.l1": "Technical support in an international environment",
+    "cv.eduact.l2": "Maintenance tasks",
+    "cv.eduact.l3": "User support",
+
+    "cv.asir.role": "Network Systems Administration",
+    "cv.asir.l1": "Networking",
+    "cv.asir.l2": "Systems",
+    "cv.asir.l3": "Virtualization",
+    "cv.asir.l4": "Basic security",
+    "cv.asir.l5": "Scripting (Bash/Python)",
+    "cv.asir.l6": "Databases (SQL)",
+
+    "cv.smr.role": "Microcomputer Systems and Networks",
+    "cv.smr.l1": "Hardware fundamentals",
+    "cv.smr.l2": "Systems",
+    "cv.smr.l3": "Networking",
+    "cv.smr.l4": "User support",
+
+    "cv.cert.title": "Certifications and Achievements",
+    "cv.cert.l1": "Microsoft Excel 2019",
+    "cv.cert.l2": "Microsoft Word 2019",
+    "cv.cert.l3": "Microsoft PowerPoint 2019",
+    "cv.cert.l4": "Cambridge C1 Advanced",
 
     "projection.title": "Career path",
     "projection.lead": "My professional goal is to guide my career toward cybersecurity, building on a solid foundation in systems, networks, and IT infrastructure administration. Although I am still defining which specific area I would like to specialize in, I have a clear interest in information security and in continuing my education in this field.",
@@ -512,55 +482,45 @@ const translations = {
     "tag.mail": "E-Mail",
     "tag.logs": "Logs",
 
-    cv: {
-        download: {
-            title: "Lebenslauf herunterladen",
-            text: "Aktualisierte PDF-Version.",
-            btn: "PDF herunterladen"
-        },
-        cdmon: {
-            role: "Technischer Support (Customer Care)",
-            l1: "Bearbeitung und Lösung technischer Vorfälle im Hosting-Bereich",
-            l2: "Grundlegende Server- und Netzwerkadministration",
-            l3: "Überwachung und Analyse von Logs und Datenverkehr",
-            l4: "Erweiterter technischer Support und Kundenbetreuung"
-        },
-        serra: {
-            role: "IT-Techniker (Praktikum)",
-            l1: "E-Mail-Verwaltung",
-            l2: "IT-Support für Schüler",
-            l3: "Gerätereparaturen"
-        },
-        eduact: {
-            role: "IT-Techniker (Erasmus+)",
-            l1: "Technischer Support in einem internationalen Umfeld",
-            l2: "Wartungsaufgaben",
-            l3: "Benutzerunterstützung"
-        },
-        asir: {
-            role: "Netzwerk-Systemadministration",
-            l1: "Netzwerke",
-            l2: "Systeme",
-            l3: "Virtualisierung",
-            l4: "Grundlegende Sicherheit",
-            l5: "Skripting (Bash/Python)",
-            l6: "Datenbanken (SQL)"
-        },
-        smr: {
-            role: "Mikrocomputer-Systeme und Netzwerke",
-            l1: "Hardware-Grundlagen",
-            l2: "Systeme",
-            l3: "Netzwerke",
-            l4: "Benutzersupport"
-        },
-        cert: {
-            title: "Zertifikate und Erfolge",
-            l1: "Microsoft Excel 2019",
-            l2: "Microsoft Word 2019",
-            l3: "Microsoft PowerPoint 2019",
-            l4: "Cambridge C1 Advanced"
-        }
-        },
+    "cv.download.title": "Lebenslauf herunterladen",
+    "cv.download.text": "Aktualisierte PDF-Version.",
+    "cv.download.btn": "PDF herunterladen",
+
+    "cv.cdmon.role": "Technischer Support (Customer Care)",
+    "cv.cdmon.l1": "Bearbeitung und Lösung technischer Vorfälle in Hosting-Umgebungen",
+    "cv.cdmon.l2": "Grundlegende Server- und Netzwerkadministration",
+    "cv.cdmon.l3": "Überwachung und Analyse von Logs und Datenverkehr",
+    "cv.cdmon.l4": "Erweiterter technischer Support und Kundenbetreuung",
+
+    "cv.serra.role": "IT-Techniker (Praktikum)",
+    "cv.serra.l1": "E-Mail-Verwaltung",
+    "cv.serra.l2": "IT-Support für Schüler",
+    "cv.serra.l3": "Gerätereparaturen",
+
+    "cv.eduact.role": "IT-Techniker (Erasmus+)",
+    "cv.eduact.l1": "Technischer Support in einem internationalen Umfeld",
+    "cv.eduact.l2": "Wartungsaufgaben",
+    "cv.eduact.l3": "Benutzerunterstützung",
+
+    "cv.asir.role": "Netzwerksystemadministration",
+    "cv.asir.l1": "Netzwerke",
+    "cv.asir.l2": "Systeme",
+    "cv.asir.l3": "Virtualisierung",
+    "cv.asir.l4": "Grundlegende Sicherheit",
+    "cv.asir.l5": "Scripting (Bash/Python)",
+    "cv.asir.l6": "Datenbanken (SQL)",
+
+    "cv.smr.role": "Mikroinformatiksysteme und Netzwerke",
+    "cv.smr.l1": "Hardware-Grundlagen",
+    "cv.smr.l2": "Systeme",
+    "cv.smr.l3": "Netzwerke",
+    "cv.smr.l4": "Benutzerunterstützung",
+
+    "cv.cert.title": "Zertifikate und Erfolge",
+    "cv.cert.l1": "Microsoft Excel 2019",
+    "cv.cert.l2": "Microsoft Word 2019",
+    "cv.cert.l3": "Microsoft PowerPoint 2019",
+    "cv.cert.l4": "Cambridge C1 Advanced",
 
     "projection.title": "Berufliche Perspektive",
     "projection.lead": "Mein berufliches Ziel ist es, meine Laufbahn in Richtung Cybersicherheit zu lenken, aufbauend auf einer soliden Grundlage in Systemen, Netzwerken und IT-Infrastrukturverwaltung. Obwohl ich noch definiere, auf welchen konkreten Bereich ich mich spezialisieren möchte, habe ich ein klares Interesse an Informationssicherheit und daran, mich in diesem Bereich weiterzubilden.",
