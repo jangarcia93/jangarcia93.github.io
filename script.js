@@ -48,6 +48,11 @@ const translations = {
     "cv.download.text": "Versión actualizada en PDF.",
     "cv.download.btn": "Descargar PDF",
 
+    "cv.i3e.role": "Técnico Informático",
+    "cv.i3e.l1": "Mantenimiento y soporte técnico de equipos informáticos e infraestructura IT del Palau de Justícia",
+    "cv.i3e.l2": "Resolución de incidencias de hardware, software, redes y puestos de trabajo, garantizando la continuidad del servicio",
+    "cv.i3e.l3": "Asistencia técnica y atención a usuarios",
+
     "cv.cdmon.role": "Soporte técnico (Customer Care)",
     "cv.cdmon.l1": "Gestión y resolución de incidencias técnicas en entornos de hosting",
     "cv.cdmon.l2": "Administración básica de servidores y redes",
@@ -63,6 +68,13 @@ const translations = {
     "cv.eduact.l1": "Soporte técnico en entorno internacional",
     "cv.eduact.l2": "Tareas de mantenimiento",
     "cv.eduact.l3": "Atención a usuarios",
+
+    "cv.unir.role": "Grado en Ciberseguridad (online)",
+    "cv.unir.l1": "Seguridad de redes y sistemas",
+    "cv.unir.l2": "Criptografía y seguridad de la información",
+    "cv.unir.l3": "Hacking ético y pentesting",
+    "cv.unir.l4": "Análisis forense digital",
+    "cv.unir.l5": "Gestión de riesgos y cumplimiento normativo",
 
     "cv.asir.role": "Administración de Sistemas Informáticos en Red",
     "cv.asir.l1": "Redes",
@@ -194,6 +206,11 @@ const translations = {
     "cv.download.text": "Versió actualitzada en PDF.",
     "cv.download.btn": "Descarregar PDF",
 
+    "cv.i3e.role": "Tècnic Informàtic",
+    "cv.i3e.l1": "Manteniment i suport tècnic d'equips informàtics i infraestructura IT del Palau de Justícia",
+    "cv.i3e.l2": "Resolució d'incidències de maquinari, programari, xarxes i llocs de treball, garantint la continuïtat del servei",
+    "cv.i3e.l3": "Assistència tècnica i atenció a usuaris",
+
     "cv.cdmon.role": "Suport tècnic (Customer Care)",
     "cv.cdmon.l1": "Gestió i resolució d'incidències tècniques en entorns de hosting",
     "cv.cdmon.l2": "Administració bàsica de servidors i xarxes",
@@ -209,6 +226,13 @@ const translations = {
     "cv.eduact.l1": "Suport tècnic en entorn internacional",
     "cv.eduact.l2": "Tasques de manteniment",
     "cv.eduact.l3": "Atenció a usuaris",
+
+    "cv.unir.role": "Grau en Ciberseguretat (en línia)",
+    "cv.unir.l1": "Seguretat de xarxes i sistemes",
+    "cv.unir.l2": "Criptografia i seguretat de la informació",
+    "cv.unir.l3": "Hacking ètic i pentesting",
+    "cv.unir.l4": "Anàlisi forense digital",
+    "cv.unir.l5": "Gestió de riscos i compliment normatiu",
 
     "cv.asir.role": "Administració de Sistemes Informàtics en Xarxa",
     "cv.asir.l1": "Xarxes",
@@ -340,6 +364,11 @@ const translations = {
     "cv.download.text": "Updated PDF version.",
     "cv.download.btn": "Download PDF",
 
+    "cv.i3e.role": "IT Technician",
+    "cv.i3e.l1": "Maintenance and technical support for computer equipment and IT infrastructure at the Palau de Justícia",
+    "cv.i3e.l2": "Resolution of hardware, software, network, and workstation incidents, ensuring service continuity",
+    "cv.i3e.l3": "Technical assistance and user support",
+
     "cv.cdmon.role": "Technical Support (Customer Care)",
     "cv.cdmon.l1": "Management and resolution of technical incidents in hosting environments",
     "cv.cdmon.l2": "Basic server and network administration",
@@ -355,6 +384,13 @@ const translations = {
     "cv.eduact.l1": "Technical support in an international environment",
     "cv.eduact.l2": "Maintenance tasks",
     "cv.eduact.l3": "User support",
+
+    "cv.unir.role": "Bachelor's Degree in Cybersecurity (online)",
+    "cv.unir.l1": "Network and systems security",
+    "cv.unir.l2": "Cryptography and information security",
+    "cv.unir.l3": "Ethical hacking and pentesting",
+    "cv.unir.l4": "Digital forensic analysis",
+    "cv.unir.l5": "Risk management and regulatory compliance",
 
     "cv.asir.role": "Network Systems Administration",
     "cv.asir.l1": "Networking",
@@ -486,6 +522,11 @@ const translations = {
     "cv.download.text": "Aktualisierte PDF-Version.",
     "cv.download.btn": "PDF herunterladen",
 
+    "cv.i3e.role": "IT-Techniker",
+    "cv.i3e.l1": "Wartung und technischer Support für Computerausrüstung und IT-Infrastruktur des Palau de Justícia",
+    "cv.i3e.l2": "Behebung von Hardware-, Software-, Netzwerk- und Arbeitsplatzproblemen zur Sicherstellung der Servicekontinuität",
+    "cv.i3e.l3": "Technischer Support und Benutzerbetreuung",
+
     "cv.cdmon.role": "Technischer Support (Customer Care)",
     "cv.cdmon.l1": "Bearbeitung und Lösung technischer Vorfälle in Hosting-Umgebungen",
     "cv.cdmon.l2": "Grundlegende Server- und Netzwerkadministration",
@@ -501,6 +542,13 @@ const translations = {
     "cv.eduact.l1": "Technischer Support in einem internationalen Umfeld",
     "cv.eduact.l2": "Wartungsaufgaben",
     "cv.eduact.l3": "Benutzerunterstützung",
+
+    "cv.unir.role": "Bachelor in Cybersicherheit (online)",
+    "cv.unir.l1": "Netzwerk- und Systemsicherheit",
+    "cv.unir.l2": "Kryptographie und Informationssicherheit",
+    "cv.unir.l3": "Ethical Hacking und Pentesting",
+    "cv.unir.l4": "Digitale Forensik",
+    "cv.unir.l5": "Risikomanagement und Compliance",
 
     "cv.asir.role": "Netzwerksystemadministration",
     "cv.asir.l1": "Netzwerke",
